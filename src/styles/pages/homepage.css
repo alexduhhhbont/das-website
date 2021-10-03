@@ -1,0 +1,12 @@
+.heroText{
+    padding: 60px;
+    background-color: rgba(149, 182, 210, 0.65);
+    width: max-content;
+    height: 400px;
+    color: white;
+}
+
+.heroTitle{
+    font-weight: 700;
+    margin-bottom: 15px;
+}

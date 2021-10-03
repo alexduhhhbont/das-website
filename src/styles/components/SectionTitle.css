@@ -1,0 +1,12 @@
+.background-SectionTitle{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.sectionTitle{
+    color:  #0E345F;
+    font-weight: 700;
+}
