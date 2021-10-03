@@ -32,6 +32,8 @@ const HomePage = () => {
 
         <SectionTitle title="Onze Fractie"/>
 
+        <Spacer spacing={2}/>
+
         <FractieRij/>
 
         <Spacer spacing={4}/>

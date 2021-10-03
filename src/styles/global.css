@@ -34,24 +34,45 @@ nav {
     color: white;
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 nav .links {
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
-nav a{
+nav .nav-link{
     margin-right: 60px;
     color: white;
     font-weight: 500;
     transition: all .2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-nav a:last-child{
+nav .nav-link:last-child{
     margin-right: 0px;
 }
 
-nav a:hover{
+nav .nav-link:hover{
     transform: scale(1.1);
 }
 

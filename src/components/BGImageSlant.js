@@ -1,5 +1,5 @@
 import React from 'react'
-import bgimage from "../images/Atlas_TUe_overzicht_1.jpg"
+import bgimage from "../images/home-header.jpg"
 import '../styles/components/BGImageSlant.css'
 import { withPrefix } from 'gatsby';
 

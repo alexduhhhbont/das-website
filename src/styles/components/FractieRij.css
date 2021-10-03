@@ -1,0 +1,31 @@
+.nameStroke{
+    position: absolute;
+    width: 200%;
+    background: white;
+    text-align: center;
+    bottom: 45px;
+    padding: 8px 0px;
+}
+
+.nameSide{
+    opacity: 0.3;
+    color: #95B6D2;
+    font-weight: 700;
+}
+
+.nameCenter{
+    color: #0E345F;
+    margin: 0px 15px;
+    font-weight: 700;
+}
+
+.fractionCard{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.fractionCard:hover{
+    transform: scale(1.05);
+    transition: all .2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
