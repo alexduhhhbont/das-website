@@ -22,15 +22,15 @@ const HomePage = () => {
           </div>
         </BGImageSlant>
 
-        <SectionTitle title="Speerpunten"/>
+        <SectionTitle title="Vision"/>
 
         <Spacer spacing={2}/>
 
         <Speerpunten/>
 
-        <Spacer spacing={4}/>
+        <Spacer spacing={6}/>
 
-        <SectionTitle title="Onze Fractie"/>
+        <SectionTitle title="Our Fraction"/>
 
         <Spacer spacing={2}/>
 

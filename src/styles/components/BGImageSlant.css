@@ -4,8 +4,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-left: calc(-100vw / 2 + 1440px / 2);
-    margin-right: calc(-100vw / 2 + 1440px / 2);
+    margin-left: calc(-100vw / 2 + 1080px / 2);
+    margin-right: calc(-100vw / 2 + 1080px / 2);
     -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
     clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
 }

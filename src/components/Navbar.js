@@ -13,15 +13,17 @@ export default function Navbar() {
                 </Link>
                 <div className="links">
                     <div className="dropdown">
-                        <Link className="dropdown-button" to="/">Party</Link>
+                        <Link className="dropdown-button" to="/about">About DAS</Link>
                         <div className='dropdown-content blue-background'>
-                            <Link className="nav-link" to="/">Party</Link>
-                            <Link className="nav-link" to="/">Priorities</Link>
-                            <Link className="nav-link" to="/contact">Contact</Link>
+                            <Link className="nav-link" to="/party/fraction">Fraction</Link>
+                            <Link className="nav-link" to="/party/board">Board</Link>
+                            <Link className="nav-link" to="/party/vision">Vision</Link>
+                            <Link className="nav-link" to="/party/associations">Associations</Link>
                         </div>
                     </div>
-                    <Link className="nav-link" to="/">Party</Link>
-                    <Link className="nav-link" to="/">Priorities</Link>
+                    <Link className="nav-link" to="/goals">Vision</Link>
+                    <Link className="nav-link" to="/student-teams">Student Teams</Link>
+                    <Link className="nav-link" to="/housing">Housing</Link>
                     <Link className="nav-link" to="/contact">Contact</Link>
                 </div>
                 </nav>
