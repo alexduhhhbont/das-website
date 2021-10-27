@@ -1,0 +1,10 @@
+.associationCard{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.associationCard:hover{
+    transform: scale(1.05);
+    transition: all .2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}

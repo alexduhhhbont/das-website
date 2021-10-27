@@ -1,7 +1,7 @@
 .nameStroke{
     position: absolute;
     width: 200%;
-    background: white;
+    background: rgba(255,255,255,0.8);
     text-align: center;
     bottom: 45px;
     padding: 8px 0px;
@@ -28,4 +28,14 @@
 .fractionCard:hover{
     transform: scale(1.05);
     transition: all .2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.fractionLink .functionTitle{
+    text-align: center;
+    width: 100%;
+    color: #0E345F;
+}
+
+.fractionLink .functionTitle:hover{
+    color: #0E345F;
 }

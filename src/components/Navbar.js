@@ -17,7 +17,6 @@ export default function Navbar() {
                         <div className='dropdown-content blue-background'>
                             <Link className="nav-link" to="/party/fraction">Fraction</Link>
                             <Link className="nav-link" to="/party/board">Board</Link>
-                            <Link className="nav-link" to="/party/vision">Vision</Link>
                             <Link className="nav-link" to="/party/associations">Associations</Link>
                         </div>
                     </div>
