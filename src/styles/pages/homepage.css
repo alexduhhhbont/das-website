@@ -10,3 +10,31 @@
     font-weight: 700;
     margin-bottom: 15px;
 }
+
+.electionsListPerson:hover{
+    transform: scale(1.05);
+    transition: all .2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.electionsIntroHeroText{
+    position: relative;
+    text-align: center;
+    margin-top: -300px;
+    margin-bottom: 300px;
+}
+
+.electionsIntroHeroText h1, h3, p{
+    color: white
+}
+
+.electionsIntroHeroText h3{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 28px;
+}
+
+.electionsIntroHeroText p{
+    font-weight: 600;
+    max-width: 40%;
+    margin: 0 auto;
+}
