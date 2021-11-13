@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
-    title: 'daswebsite',
+    siteUrl: 'https://www.daseindhoven.nl',
+    siteTitle: {
+      long: "De Ambitieuze Student Eindhoven",
+      short: "DAS Eindhoven",
+    }
   },
   plugins: [
     {
