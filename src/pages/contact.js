@@ -2,6 +2,12 @@ import React from 'react'
 import SectionTitle from '../components/titles/SectionTitle';
 import Spacer from '../components/spacer/Spacer';
 import BaseLayout from '../layouts/BaseLayout';
+import ContactForm from '../components/forms/ContactForm';
+import Stack from '@mui/material/Stack';
+import Link from '@mui/material/Link';
+import FacebookIcon from '@mui/icons-material/Facebook';    
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 export default function contact() {
     return (
@@ -13,20 +19,31 @@ export default function contact() {
 
             <Spacer spacing={2}/>
 
-            <h3>Email</h3>
-            <a href="mailto:fraction@daseindhoven.nl"><span>Fraction: </span> fraction@daseindhoven.nl</a>
-            <a href="mailto:board@daseindhoven.nl"><span>Board: </span> board@daseindhoven.nl</a>
+            <ContactForm />
+
+            <Spacer spacing={4}/>
+
+            <SectionTitle title="Email"/>
             <Spacer spacing={2}/>
+            <Stack spacing={2} style={{textAlign: "center"}}>
+                <Link underline="none" href="mailto:fraction@daseindhoven.nl" style={{color: "black"}}><span style={{fontWeight: "600"}}>Fraction: </span> fraction@daseindhoven.nl</Link>
+                <Link underline="none" href="mailto:board@daseindhoven.nl" style={{color: "black"}}><span style={{fontWeight: "600"}}>Board: </span> board@daseindhoven.nl</Link>
+            </Stack>
+            <Spacer spacing={4}/>
 
-            <h3>Phone</h3>
-            <a href="tel:0641774267">06-41774267</a>
-
+            <SectionTitle title="Phone"/>
             <Spacer spacing={2}/>
+            <Stack spacing={2} style={{textAlign: "center"}}>
+            <Link underline="none" href="tel:0641774267" style={{color: "black"}}>06-41774267</Link>
+            </Stack>
+            <Spacer spacing={4}/>
 
-            <h3>Social Media</h3>
-            <a href="tel:0641774267">Instagram</a>
-            <a href="tel:0641774267">FaceBook</a>
-
+            <SectionTitle title="Social Media"/>
+            <Spacer spacing={2}/>
+            <Stack spacing={2} style={{textAlign: "center"}}>
+            <Link underline="none" href="https://www.instagram.com/daseindhoven/" style={{color: "black", display: "flex", justifyContent: "center", alignItems: "center"}}><InstagramIcon/>Instagram</Link>
+            <Link underline="none" href="https://www.facebook.com/DASEindhoven" style={{color: "black", display: "flex", justifyContent: "center", alignItems: "center"}}><FacebookIcon/>FaceBook</Link>
+            </Stack>
             <Spacer spacing={4}/>
             
         </BaseLayout>

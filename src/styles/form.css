@@ -1,0 +1,9 @@
+form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form .forminput{
+    display: block;
+    margin-bottom: 15px;
+}

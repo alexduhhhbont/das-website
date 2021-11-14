@@ -13,7 +13,7 @@ export default function BGImageSlant({children}, props) {
             </div>
         </div>
         ) : (
-        <div className={"background-elections"} style={{ background: `url(${bgimage}) rgba(149, 182, 210, 1)`, backgroundSize: "cover" }}>
+        <div className={"background-elections"} style={{ background: `rgba(149, 182, 210, 1)`, backgroundSize: "cover" }}>
             <div className="container">
                 {children}
             </div>

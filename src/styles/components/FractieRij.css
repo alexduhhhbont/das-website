@@ -5,6 +5,7 @@
     text-align: center;
     bottom: 45px;
     padding: 8px 0px;
+    z-index: 9;
 }
 
 .nameSide{

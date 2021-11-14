@@ -13,7 +13,8 @@ import Image from "gatsby-image"
 import Button from '@mui/material/Button';
 
 const HomePage = ({data}) => {
-  const { title, verkiezingsTijd, lijst, slug } = data.contentfulHomePagina
+  const { title, verkiezingsTijd } = data.contentfulHomePagina
+  const { nodes } = data.allContentfulLijstPersoon
 
   return (
       <BaseLayout>
@@ -40,7 +41,7 @@ const HomePage = ({data}) => {
           <>
           <BGImageSlant elections></BGImageSlant>
           <div className="electionsIntroHeroText">
-            <h1>Elections 2022</h1>
+            <h1>Elections 2021</h1>
             <h3>7th and 8th of December</h3>
             <p>DAS focusses on the ambitious students like 
               yourself that want to develop themselves 
@@ -48,12 +49,20 @@ const HomePage = ({data}) => {
             <Button variant="contained">Vote now!</Button>
           </div>
 
+          <SectionTitle title="Vision 2022"/>
+
+          <Spacer spacing={2}/> 
+
+          <Speerpunten />
+
+          <Spacer spacing={6}/> 
+
           <SectionTitle title="List 2022"/>
 
           <Spacer spacing={2}/> 
 
           <Grid container>
-            {lijst.map((persoon) => (
+            {nodes.map((persoon) => (
               
                 <Grid className="electionsListPerson" item xs={2}>
                   <a href={"/elections/list/" + persoon.slug}>
@@ -72,18 +81,16 @@ const HomePage = ({data}) => {
           <Spacer spacing={2}/>
   
           <Speerpunten/>
+
+          <Spacer spacing={6}/>
+
+          <SectionTitle title="Our Fraction"/>
+
+          <Spacer spacing={2}/>
+
+          <FractieRij/>
           </>
         )}
-
-
-
-        <Spacer spacing={6}/>
-
-        <SectionTitle title="Our Fraction"/>
-
-        <Spacer spacing={2}/>
-
-        <FractieRij/>
 
         <Spacer spacing={4}/>
 
@@ -96,7 +103,10 @@ query getHomePagina{
   contentfulHomePagina {
     title
     verkiezingsTijd
-    lijst {
+  }
+
+  allContentfulLijstPersoon(sort: { fields: [plek], order: ASC }) {
+    nodes {
       naam
       foto {
         fluid(maxWidth: 1920, maxHeight: 1080, quality: 80) {

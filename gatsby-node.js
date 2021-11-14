@@ -1,7 +1,7 @@
 const path = require("path")
 
 exports.createPages = async ({ graphql, actions }) => {
-  const result = await graphql(`
+  const resultLijst = await graphql(`
   query getLijstPersonen {
     allContentfulLijstPersoon {
       nodes {
@@ -11,7 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
   `)
 
-  result.data.allContentfulLijstPersoon.nodes.forEach(({ slug }) =>
+  resultLijst.data.allContentfulLijstPersoon.nodes.forEach(({ slug }) =>
     actions.createPage({
       path: "elections/list/" + slug,
       component: path.resolve("./src/templates/ListPersonPage.js"),

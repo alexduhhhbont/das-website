@@ -9,34 +9,41 @@ import fractie2 from '../../images/25.SiebrenvanderWerf.jpg'
 import fractie3 from '../../images/27.AlexdeBont.jpg'
 import '../../styles/components/FractieRij.css'
 import { Link } from 'gatsby';
+import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 export default function FractieRij() {
+    const data = useStaticQuery(getFractie)
+
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={4}>
-              <Link className="fractionLink" to="/party/fraction">
-                <Card style={{position: "relative"}} className="fractionCard">
-                  <div className='nameStroke'><span className='nameSide'>Joëlle Bink</span><span className='nameCenter'>Joëlle Bink</span><span className='nameSide'>Joëlle Bink</span></div>
-                    <CardMedia component="img" image={fractie1} height="500" alt="fractieFoto"/>
-                </Card>
-              </Link>
-            </Grid>
-            <Grid item xs={4}>
-              <Link className="fractionLink" to="/party/fraction">
-                <Card style={{position: "relative"}} className="fractionCard">
-                  <div className='nameStroke'><span className='nameSide'>Siebren van der Werf</span><span className='nameCenter'>Siebren van der Werf</span><span className='nameSide'>Siebren van der Werf</span></div>
-                    <CardMedia component="img" image={fractie2} height="500" alt="fractieFoto"/>
-                </Card>
-                </Link>
-            </Grid>
-            <Grid item xs={4}>
-              <Link className="fractionLink" to="/party/fraction">
-                <Card style={{position: "relative"}} className="fractionCard">
-                  <div className='nameStroke'><span className='nameSide'>Alex de Bont</span><span className='nameCenter'>Alex de Bont</span><span className='nameSide'>Alex de Bont</span></div>
-                    <CardMedia component="img" image={fractie3} height="500" alt="fractieFoto"/>
-                </Card>
-              </Link>
-            </Grid>
-        </Grid>
+      <Grid container spacing={2}>
+        {data.allContentfulFractielid.nodes.map((entry) => (
+          <Grid item xs={4}>
+            <Link className="fractionLink" to="/party/fraction">
+              <Card style={{position: "relative"}} className="fractionCard">
+                <div className='nameStroke'><span className='nameSide'>{entry.naam}</span><span className='nameCenter'>{entry.naam}</span><span className='nameSide'>{entry.naam}</span></div>
+                  <Image component="img" fluid={entry.foto.fluid} style={{height: "500px", width: "100%"}} alt="fractieFoto"></Image>
+              </Card>
+            </Link>
+          </Grid>
+        ))}
+      </Grid>
     )
 }
+
+
+const getFractie = graphql`
+  query getFractieLeden {
+    allContentfulFractielid {
+      nodes {
+        email
+        naam
+        foto {
+          fluid(maxWidth: 1920, maxHeight: 1080, quality: 80) {
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+        }
+      }
+    }
+  }
+`
