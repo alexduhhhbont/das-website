@@ -16,10 +16,10 @@ export default function Speerpunten() {
             {data.allContentfulStandpunten.nodes.map((entry) => (
                 <Grid item xs={12}>
                     <Grid container>
-                        <Grid style={{justifyContent: "center", display: "flex"}} item xs={2}>
+                        <Grid style={{justifyContent: "center", display: "flex"}} item xs={12} md={2}>
                             <Image component="img" fluid={entry.icon.fluid} style={{height: "150px", width: "150px"}} alt="icon"></Image>
                         </Grid>
-                        <Grid item xs={10}>
+                        <Grid item xs={12} md={10}>
                             <CardContent>
                                 <Typography variant="h5">{entry.standpunt.standpunt}</Typography>
                                 <Typography paragraph variant="body1">We want to represent students like you, who believe studying is more than just academic learning. We see the need for flexible education, to enable ambitious students to decide when and how they study. Improving online education is one of the means to achieve this goal.</Typography>

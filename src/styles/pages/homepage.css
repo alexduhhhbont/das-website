@@ -1,3 +1,35 @@
+@media only screen and (min-width: 900px) {
+    .electionsIntroHeroText{
+        position: relative;
+        text-align: center;
+        margin-top: -355px;
+        margin-bottom: 90px;
+    }
+
+    .electionsIntroHeroText h1{
+        font-weight: 600;
+        font-size: 48px;
+        color: white;
+    }
+
+    .electionsIntroHeroText h3{
+        font-weight: 400;
+        font-style: italic;
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .electionsIntroHeroText p{
+        font-weight: 600;
+        max-width: 40%;
+        font-size: 20px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        color: white;
+    }
+}
+
 .heroText{
     padding: 60px;
     background-color: rgba(149, 182, 210, 0.8);
@@ -16,32 +48,44 @@
     transition: all .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+.electionListGrid{
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+@media only screen and (max-width: 900px) {
+
 .electionsIntroHeroText{
     position: relative;
     text-align: center;
-    margin-top: -370px;
-    margin-bottom: 90px;
+    margin-top: -330px;
+    margin-bottom: 150px;
 }
 
 .electionsIntroHeroText h1{
     font-weight: 600;
-    font-size: 48px;
+    font-size: 32px;
     color: white;
 }
 
 .electionsIntroHeroText h3{
     font-weight: 400;
     font-style: italic;
-    font-size: 28px;
+    font-size: 20px;
     margin-bottom: 15px;
     color: white;
 }
 
 .electionsIntroHeroText p{
-    font-weight: 600;
-    max-width: 40%;
-    font-size: 20px;
+    font-weight: 500;
+    max-width: 100%;
+    font-size: 16px;
     margin: 0 auto;
     margin-bottom: 30px;
     color: white;
+}
 }

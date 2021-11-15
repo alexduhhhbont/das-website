@@ -11,10 +11,24 @@ import { graphql } from "gatsby";
 import Grid from '@mui/material/Grid';
 import Image from "gatsby-image"
 import Button from '@mui/material/Button';
+import { makeStyles} from "@material-ui/core"
+import {
+  Hidden,
+} from "@material-ui/core"
+
+const useStyles = makeStyles({
+  image: {
+    height: '200px',
+    "@media (min-width: 900px)": {
+      height: '300px',
+    }
+  },
+})
 
 const HomePage = ({data}) => {
   const { title, verkiezingsTijd } = data.contentfulHomePagina
   const { nodes } = data.allContentfulLijstPersoon
+  const classes = useStyles()
 
   return (
       <BaseLayout>
@@ -61,13 +75,12 @@ const HomePage = ({data}) => {
 
           <Spacer spacing={2}/> 
 
-          <Grid container>
+          <Grid container className="electionListGrid">
             {nodes.map((persoon) => (
               
-                <Grid className="electionsListPerson" item xs={2}>
+                <Grid className="electionsListPerson" item xs={6} sm={3} md={2}>
                   <a href={"/elections/list/" + persoon.slug}>
-                    <p style={{position: "absolute", marginLeft: "15px", zIndex: "2", fontSize: "48px", color: "white"}}>{persoon.plek}</p>
-                    <Image fluid={persoon.foto.fluid} style={{height: "200px"}}></Image>
+                    <Image fluid={persoon.foto.fluid} className={classes.image}></Image>
                   </a>
                 </Grid>
               
@@ -89,10 +102,11 @@ const HomePage = ({data}) => {
           <Spacer spacing={2}/>
 
           <FractieRij/>
+
+          <Spacer spacing={4}/>
           </>
         )}
 
-        <Spacer spacing={4}/>
 
       </BaseLayout>
   )
