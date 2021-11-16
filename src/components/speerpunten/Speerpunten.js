@@ -22,7 +22,7 @@ export default function Speerpunten() {
                         <Grid item xs={12} md={10}>
                             <CardContent>
                                 <Typography variant="h5">{entry.standpunt.standpunt}</Typography>
-                                <Typography paragraph variant="body1">We want to represent students like you, who believe studying is more than just academic learning. We see the need for flexible education, to enable ambitious students to decide when and how they study. Improving online education is one of the means to achieve this goal.</Typography>
+                                <Typography paragraph variant="body3">{entry.elaboration.elaboration}</Typography>
                             </CardContent>
                         </Grid>
                     </Grid>
@@ -38,6 +38,9 @@ const getSpeerpunten = graphql`
         nodes {
           standpunt {
             standpunt
+          }
+          elaboration {
+            elaboration
           }
           icon {
             fluid(maxWidth: 150, maxHeight: 150, quality: 100) {

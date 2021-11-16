@@ -29,8 +29,12 @@ const ListPersonPage = ({ data }) => {
                     {omschrijving.omschrijving}
                 
                     <Spacer spacing={2}/>
-                    <h4>Follow me</h4>
-                    <Spacer spacing={0.5}/>
+                    {instagramButton || linkedinButton ? (
+                      <>
+                        <h4>Follow me</h4>
+                        <Spacer spacing={0.5}/>
+                      </>
+                    ) : ("")}
                     <Stack direction="row" spacing={2}>
                     {instagramButton ? (
                     <Button variant="outlined" href={instagramLink} startIcon={<InstagramIcon />}>

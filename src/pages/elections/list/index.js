@@ -4,18 +4,22 @@ import BaseLayout from '../../../layouts/BaseLayout';
 import { useStaticQuery, graphql } from "gatsby"
 import Grid from '@mui/material/Grid';
 import Image from "gatsby-image"
+import SectionTitle from '../../../components/titles/SectionTitle';
 
 export default function ElectionList() {
 
     const data = useStaticQuery(query)
     return (
         <BaseLayout>
+            <Spacer spacing={2}/>
+            <SectionTitle title="List 2022"/>
+            <Spacer spacing={2}/>
+
             <Grid container>
             {data.allContentfulLijstPersoon.nodes.map((persoon) => (
               
-                <Grid className="electionsListPerson" item xs={2}>
+                <Grid className="electionsListPerson" item xs={6} sm={3} md={2}>
                   <a href={"/elections/list/" + persoon.slug}>
-                    <p style={{position: "absolute", marginLeft: "15px", zIndex: "2", fontSize: "48px", color: "white"}}>{persoon.plek}</p>
                     <Image fluid={persoon.foto.fluid} style={{height: "200px"}}></Image>
                   </a>
                 </Grid>
