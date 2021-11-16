@@ -2,14 +2,13 @@ import React from 'react'
 import SectionTitle from '../components/titles/SectionTitle';
 import Spacer from '../components/spacer/Spacer';
 import BaseLayout from '../layouts/BaseLayout';
-import ContactForm from '../components/forms/ContactForm';
+import {ContactForm} from '../components/forms/ContactForm';
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 import FacebookIcon from '@mui/icons-material/Facebook';    
 import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 
-export default function contact() {
+export default function Contact() {
     return (
         <BaseLayout>
 
