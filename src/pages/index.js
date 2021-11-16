@@ -40,7 +40,7 @@ const HomePage = ({data}) => {
               <BGImageSlant>
               <div className="heroText">
                 <h1 className="heroTitle">{title}</h1>
-                <p>DAS focusses on the ambitious students like </p>
+                <p>DAS focuses on the ambitious students like </p>
                 <p>yourself that want to develop themselves </p>
                 <p>alongside their studies.</p>
                 <Spacer spacing={2}/>
@@ -57,7 +57,7 @@ const HomePage = ({data}) => {
           <div className="electionsIntroHeroText">
             <h1>Elections 2021</h1>
             <h3>7th and 8th of December</h3>
-            <p>DAS focusses on the ambitious students like 
+            <p>DAS focuses on the ambitious students like 
               yourself that want to develop themselves 
               alongside their studies.</p>
             <Button variant="contained">Vote now!</Button>
