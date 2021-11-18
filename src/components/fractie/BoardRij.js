@@ -18,7 +18,7 @@ export default function BoardRij() {
           <Typography paragraph variant="body3">The board of DAS is responsible for the organization around DAS and consist of the following people:</Typography>
           <Spacer spacing={2}/>
           <Grid container spacing={2}>
-              <Grid item xs={3}>
+              <Grid item xs={12} md={3}>
                   <Card>
                       <Box padding={4}>
                   <Typography variant="h5">Imke Bloemen</Typography>
@@ -26,7 +26,7 @@ export default function BoardRij() {
                     </Box>
                   </Card>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} md={3}>
                   <Card>
                       <Box padding={4}>
                   <Typography variant="h5">Lucas Poppelaars</Typography>
@@ -34,7 +34,7 @@ export default function BoardRij() {
                     </Box>
                   </Card>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} md={3}>
                   <Card>
                       <Box padding={4}>
                   <Typography variant="h5">Sven Leenman</Typography>

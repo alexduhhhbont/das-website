@@ -6,17 +6,39 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import SectionTitle from '../components/titles/SectionTitle';
 import Spacer from '../components/spacer/Spacer';
+import { makeStyles} from "@material-ui/core"
+
+const useStyles = makeStyles({
+  gridContainer: {
+    "@media (max-width: 900px)": {
+      position: "relative",
+      width: "100vw !important",
+      left: "50%",
+      right: "50%",
+      marginLeft: "-50vw",
+      marginRight: "-50vw",
+    }
+  },
+  image: {
+    height: "600px",
+    "@media (max-width: 900px)": {
+      height: "350px"
+    }
+  }
+})
 
 const FractionMemberPage = ({ data }) => {
   const { naam, foto } = data.contentfulFractielid
 
+  const classes = useStyles()
+
   return (
     <BaseLayout>
-        <Grid container>
-            <Grid item xs={5}>
-                <Image fluid={foto.fluid} style={{height: "600px"}}></Image>
+        <Grid container className={classes.gridContainer}>
+            <Grid item xs={12} md={5}>
+                <Image fluid={foto.fluid} className={classes.image}></Image>
             </Grid>
-            <Grid item xs={7}>
+            <Grid item xs={12} md={7}>
                 <Box p={6}>
                     <SectionTitle title={naam}/>
                     <Spacer spacing={2}/>

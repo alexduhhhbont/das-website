@@ -10,18 +10,41 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Stack from '@mui/material/Stack';
 import Spacer from '../components/spacer/Spacer';
+import Hidden from '@mui/material/Hidden';
+import { makeStyles} from "@material-ui/core"
+
+const useStyles = makeStyles({
+  gridContainer: {
+    "@media (max-width: 900px)": {
+      position: "relative",
+      width: "100vw !important",
+      left: "50%",
+      right: "50%",
+      marginLeft: "-50vw",
+      marginRight: "-50vw",
+    }
+  },
+  image: {
+    height: "600px",
+    "@media (max-width: 900px)": {
+      height: "350px"
+    }
+  }
+})
 
 const ListPersonPage = ({ data }) => {
   const { naam, foto, omschrijving, plek, instagramButton,instagramLink,linkedinButton,linkedinLink } = data.contentfulLijstPersoon
 
+  const classes = useStyles()
+
   return (
     <BaseLayout>
-        <Grid container>
-            <Grid item xs={5}>
-                <Image fluid={foto.fluid} style={{height: "600px"}}></Image>
+        <Grid container className={classes.gridContainer}>
+            <Grid item xs={12} md={5}>
+                <Image fluid={foto.fluid} className={classes.image}></Image>
             </Grid>
-            <Grid item xs={7}>
-                <Box p={6}>
+            <Grid item xs={12} md={7}>
+                <Box p={{xs: 4, md: 6}}>
                     <SectionTitle title={naam}/>
                     <Spacer spacing={2}/>
                     <h4>#{plek}</h4>
@@ -35,6 +58,7 @@ const ListPersonPage = ({ data }) => {
                         <Spacer spacing={0.5}/>
                       </>
                     ) : ("")}
+                    <Hidden mdDown>
                     <Stack direction="row" spacing={2}>
                     {instagramButton ? (
                     <Button variant="outlined" href={instagramLink} startIcon={<InstagramIcon />}>
@@ -51,6 +75,25 @@ const ListPersonPage = ({ data }) => {
                         ""
                     )}
                     </Stack>
+                    </Hidden>
+                    <Hidden lgUp>
+                    <Stack spacing={2}>
+                    {instagramButton ? (
+                    <Button variant="outlined" href={instagramLink} startIcon={<InstagramIcon />}>
+                        Instagram
+                    </Button>
+                    ) : (
+                    ""
+                    )}
+                    {linkedinButton ? (
+                    <Button variant="outlined" href={linkedinLink} startIcon={<LinkedInIcon />}>
+                        Linkedin
+                    </Button>
+                    ) : (
+                        ""
+                    )}
+                    </Stack>
+                    </Hidden>
                 </Box>
             </Grid>
         </Grid>
@@ -72,7 +115,7 @@ export const query = graphql`
       linkedinButton
       linkedinLink
       foto {
-        fluid(maxWidth: 1920, maxHeight: 1080, quality: 80) {
+        fluid(quality: 100) {
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
       }
