@@ -3,14 +3,17 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import '../styles/global.css'
 import '../styles/parameters.css'
+import Container from '@mui/material/Container';
 
 export default function BaseLayout({children}) {
     return (
         <div className="baselayout">
             <Navbar/>
-            <div className="content">
-                {children}
-            </div>
+            <Container>
+                <div className="content">
+                    {children}
+                </div>
+            </Container>
             <Footer/>
         </div>
     )

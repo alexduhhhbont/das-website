@@ -26,7 +26,7 @@ const FractionPage = ({data}) => {
                     <SectionTitle title={entry.jaar}/>
                     <Spacer spacing={2}/>
                     <div style={{width: "100%"}}>
-                        <Image component="img" fluid={entry.foto.fluid} style={{height: "100%", width: "100%", objectFit: "cover"}} alt="fraction"></Image>
+                        <Image component="img" fluid={entry.foto.fluid} style={{height: "700px", width: "100%", objectFit: "contain"}} alt="fraction"></Image>
                     </div>
                     <Typography variant='body1' align="center">{entry.leden}</Typography>
 

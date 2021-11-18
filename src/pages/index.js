@@ -11,10 +11,24 @@ import { graphql } from "gatsby";
 import Grid from '@mui/material/Grid';
 import Image from "gatsby-image"
 import Button from '@mui/material/Button';
+import { makeStyles} from "@material-ui/core"
+import {
+  Hidden,
+} from "@material-ui/core"
+
+const useStyles = makeStyles({
+  image: {
+    height: '200px',
+    "@media (min-width: 900px)": {
+      height: '300px',
+    }
+  },
+})
 
 const HomePage = ({data}) => {
   const { title, verkiezingsTijd } = data.contentfulHomePagina
   const { nodes } = data.allContentfulLijstPersoon
+  const classes = useStyles()
 
   return (
       <BaseLayout>
@@ -26,7 +40,7 @@ const HomePage = ({data}) => {
               <BGImageSlant>
               <div className="heroText">
                 <h1 className="heroTitle">{title}</h1>
-                <p>DAS focusses on the ambitious students like </p>
+                <p>DAS focuses on the ambitious students like </p>
                 <p>yourself that want to develop themselves </p>
                 <p>alongside their studies.</p>
                 <Spacer spacing={2}/>
@@ -43,7 +57,7 @@ const HomePage = ({data}) => {
           <div className="electionsIntroHeroText">
             <h1>Elections 2021</h1>
             <h3>7th and 8th of December</h3>
-            <p>DAS focusses on the ambitious students like 
+            <p>DAS focuses on the ambitious students like 
               yourself that want to develop themselves 
               alongside their studies.</p>
             <Button variant="contained">Vote now!</Button>
@@ -61,13 +75,12 @@ const HomePage = ({data}) => {
 
           <Spacer spacing={2}/> 
 
-          <Grid container>
+          <Grid container className="electionListGrid">
             {nodes.map((persoon) => (
               
-                <Grid className="electionsListPerson" item xs={2}>
+                <Grid className="electionsListPerson" item xs={6} sm={3} md={2}>
                   <a href={"/elections/list/" + persoon.slug}>
-                    <p style={{position: "absolute", marginLeft: "15px", zIndex: "2", fontSize: "48px", color: "white"}}>{persoon.plek}</p>
-                    <Image fluid={persoon.foto.fluid} style={{height: "200px"}}></Image>
+                    <Image fluid={persoon.foto.fluid} className={classes.image}></Image>
                   </a>
                 </Grid>
               
@@ -89,10 +102,11 @@ const HomePage = ({data}) => {
           <Spacer spacing={2}/>
 
           <FractieRij/>
+
+          <Spacer spacing={4}/>
           </>
         )}
 
-        <Spacer spacing={4}/>
 
       </BaseLayout>
   )
