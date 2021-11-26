@@ -10,7 +10,7 @@ export default function associations() {
             <Spacer spacing={4}/>
             <SectionTitle title="Associations"/>
             <Spacer spacing={2}/>
-            <p style={{textAlign: "center"}}>Never gonna give you up, never gonna let you down, never gonna turn around and desert you. Never gonna give you up, never gonna let you down, never gonna turn around and desert you. Never gonna give you up, never gonna let you down, never gonna turn around and desert you. Never gonna give you up, never gonna let you down, never gonna turn around and desert you.</p>
+            <p style={{textAlign: "center"}}>DAS is supported by the following associations:</p>
             <Spacer spacing={2}/>
             <AssociationsGrid/>
             <Spacer spacing={4}/>

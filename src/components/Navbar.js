@@ -91,6 +91,8 @@ export default function Navbar() {
                                 <Link className="nav-link" to="/elections/goals">Vision</Link>
                             </div>
                         </div> 
+                        <Link className="nav-link" to="/housing">Housing</Link>
+                        <Link className="nav-link" to="/student-teams">Student teams</Link>
                         <Link className="nav-link" to="/contact">Contact</Link>
                     </div>
                     </Hidden>
