@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Grid from '@mui/material/Grid';
 import Image from "gatsby-image"
 import SectionTitle from '../../../components/titles/SectionTitle';
+import '../../../styles/pages/homepage.css'
 
 export default function ElectionList() {
 
@@ -15,12 +16,12 @@ export default function ElectionList() {
             <SectionTitle title="List 2022"/>
             <Spacer spacing={2}/>
 
-            <Grid container>
+            <Grid container className="electionListGrid">
             {data.allContentfulLijstPersoon.nodes.map((persoon) => (
               
                 <Grid className="electionsListPerson" item xs={6} sm={3} md={2}>
                   <a href={"/elections/list/" + persoon.slug}>
-                    <Image fluid={persoon.foto.fluid} style={{height: "200px"}}></Image>
+                    <Image fluid={persoon.foto.fluid} style={{height: "300px"}}></Image>
                   </a>
                 </Grid>
               

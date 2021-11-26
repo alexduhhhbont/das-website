@@ -57,10 +57,9 @@ const HomePage = ({data}) => {
           <div className="electionsIntroHeroText">
             <h1>Elections 2021</h1>
             <h3>7th and 8th of December</h3>
-            <p>DAS focuses on the ambitious students like 
-              yourself that want to develop themselves 
+            <p>DAS focuses on the ambitious students that want to develop themselves 
               alongside their studies.</p>
-            <Button variant="contained">Vote now!</Button>
+            <Button href="https://elections.tue.nl/" variant="contained">Vote now!</Button>
           </div>
 
           <SectionTitle title="Vision 2022"/>
@@ -123,7 +122,7 @@ query getHomePagina{
     nodes {
       naam
       foto {
-        fluid(maxWidth: 1920, maxHeight: 1080, quality: 80) {
+        fluid(quality: 100) {
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
       }
