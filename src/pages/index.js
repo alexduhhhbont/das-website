@@ -15,6 +15,7 @@ import { makeStyles} from "@material-ui/core"
 import {
   Hidden,
 } from "@material-ui/core"
+import { Helmet } from "react-helmet"
 
 const useStyles = makeStyles({
   image: {
@@ -32,6 +33,10 @@ const HomePage = ({data}) => {
 
   return (
       <BaseLayout>
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>De Ambitieuze Student Eindhoven</title>
+      </Helmet>
         
 
             { verkiezingsTijd ? (

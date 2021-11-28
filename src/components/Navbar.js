@@ -121,13 +121,15 @@ export default function Navbar() {
                                 <Spacer spacing={2}/> 
                                 <MobileLink className="nav-link" to="/">Home</MobileLink>
                                 <MobileLink className="nav-link" to="/contact">Contact</MobileLink>
+                                <MobileLink className="nav-link" to="/housing">Housing</MobileLink>
+                                <MobileLink className="nav-link" to="/student-teams">Student teams</MobileLink>
+                                <MenuGroup>Elections 2021</MenuGroup>
+                                <MobileLink className="nav-link" to="/elections/list">List 2022</MobileLink>
+                                <MobileLink className="nav-link" to="/elections/goals">Vison 2022</MobileLink>  
                                 <MenuGroup>Party</MenuGroup>
                                 <MobileLink className="nav-link" to="/party/fraction">Fraction</MobileLink>
                                 <MobileLink className="nav-link" to="/party/board">Board</MobileLink>
-                                <MobileLink className="nav-link" to="/party/associations">Associations</MobileLink>
-                                <MenuGroup>Elections 2021</MenuGroup>
-                                <MobileLink className="nav-link" to="/elections/list">List 2022</MobileLink>
-                                <MobileLink className="nav-link" to="/elections/goals">Vison 2022</MobileLink>                              
+                                <MobileLink className="nav-link" to="/party/associations">Associations</MobileLink>                            
                             </ListItemContainerMobile>
                         </ListFullWidth>
                         </DrawerNavigation>

@@ -12,6 +12,7 @@ import { Link } from 'gatsby';
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
+
 export default function FractieRij() {
     const data = useStaticQuery(getFractie)
 
@@ -22,7 +23,7 @@ export default function FractieRij() {
             <Link className="fractionLink" to={"/party/fraction/" + entry.slug}>
               <Card style={{position: "relative"}} className="fractionCard">
                 <div className='nameStroke'><span className='nameSide'>{entry.naam}</span><span className='nameCenter'>{entry.naam}</span><span className='nameSide'>{entry.naam}</span></div>
-                  <Image component="img" fluid={entry.foto.fluid} style={{height: "500px", width: "100%"}} alt="fractieFoto"></Image>
+                <Image component="img" fluid={entry.foto.fluid} style={{height: "500px", width: "100%"}} alt="fractieFoto"></Image>
               </Card>
             </Link>
           </Grid>
@@ -36,7 +37,6 @@ const getFractie = graphql`
   query getFractieLeden {
     allContentfulFractielid {
       nodes {
-        email
         naam
         slug
         foto {
