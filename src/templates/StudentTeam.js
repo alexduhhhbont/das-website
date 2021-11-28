@@ -12,7 +12,6 @@ import { Description } from '@material-ui/icons';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-
 const StudentTeamPage = ({ data }) => {
   const { name, image, description, vacanciesList, url } = data.contentfulStudentTeam
 
@@ -20,18 +19,21 @@ const StudentTeamPage = ({ data }) => {
     <BaseLayout>
         <Spacer spacing={4}/>
           <SectionTitle title={name}/>
-        <Spacer spacing={2}/>
+        <Spacer spacing={4}/>
         <Grid container spacing={2}>
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                   <Typography variant="h5">Vacancies</Typography>
                   {documentToReactComponents(JSON.parse(vacanciesList.raw))}
-                  <OutboundLink style={{background: "#0E345F", color: "white", padding: "8px 15px", borderRadius: "5px", margin: "15px 0px"}} href={url}>Apply now</OutboundLink>
+                  <OutboundLink target="_blank" style={{background: "#0E345F", color: "white", padding: "8px 15px", borderRadius: "5px", margin: "15px 0px", display: "inline-block"}} href={url}>Apply now!</OutboundLink>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                   <Image fluid={image.fluid} ></Image>
               </Grid>
           </Grid>
+          <Spacer spacing={2}/>
+          <Typography variant="h6">About {name}</Typography>
         <Typography paragraph>{description.description}</Typography>
+        <Spacer spacing={4}/>
     </BaseLayout>
   )
 }

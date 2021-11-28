@@ -7,6 +7,8 @@ import Box from '@mui/material/Box';
 import SectionTitle from '../components/titles/SectionTitle';
 import Spacer from '../components/spacer/Spacer';
 import { makeStyles} from "@material-ui/core"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { Typography, Button } from '@mui/material';
 
 const useStyles = makeStyles({
   gridContainer: {
@@ -28,7 +30,7 @@ const useStyles = makeStyles({
 })
 
 const FractionMemberPage = ({ data }) => {
-  const { naam, foto } = data.contentfulFractielid
+  const { naam, foto, portfolio, email } = data.contentfulFractielid
 
   const classes = useStyles()
 
@@ -42,6 +44,10 @@ const FractionMemberPage = ({ data }) => {
                 <Box p={6}>
                     <SectionTitle title={naam}/>
                     <Spacer spacing={2}/>
+                    {documentToReactComponents(JSON.parse(portfolio.raw))}
+                    <Spacer spacing={2}/>
+                    <Typography>Contact me:</Typography>
+                    <Button variant="contained" href={"mailto:" + email}>{email}</Button>
                 </Box>
             </Grid>
         </Grid>
@@ -52,13 +58,16 @@ const FractionMemberPage = ({ data }) => {
 export const query = graphql`
   query getFractionMemberPage($slug: String!) {
     contentfulFractielid(slug: { eq: $slug }) {
+      email
       naam
       slug
-      email
       foto {
         fluid(maxWidth: 1920, maxHeight: 1080, quality: 80) {
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
+      }
+      portfolio {
+        raw
       }
     }
   }

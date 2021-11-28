@@ -1,11 +1,11 @@
 import React from 'react'
-import Spacer from '../../../components/spacer/Spacer';
-import BaseLayout from '../../../layouts/BaseLayout';
+import Spacer from '../../components/spacer/Spacer';
+import BaseLayout from '../../layouts/BaseLayout';
 import { useStaticQuery, graphql } from "gatsby"
 import Grid from '@mui/material/Grid';
 import Image from "gatsby-image"
-import SectionTitle from '../../../components/titles/SectionTitle';
-import '../../../styles/pages/homepage.css'
+import SectionTitle from '../../components/titles/SectionTitle';
+import '../../styles/pages/homepage.css'
 
 export default function ElectionList() {
 

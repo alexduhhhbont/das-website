@@ -6,10 +6,16 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { graphql, Link } from "gatsby";
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import Image from 'gatsby-image';
+import { Helmet } from "react-helmet"
 
 export default function Housing({data}) {
     return (
         <BaseLayout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Housing - DAS Eindhoven</title>
+            </Helmet>
             <Spacer spacing={4}/>
             <SectionTitle title="Housing"/>
             <Spacer spacing={2}/>    
@@ -25,6 +31,9 @@ export default function Housing({data}) {
             <Typography paragraph variant="body3">Are you currently renting a room, studio, appartment or house in Eindhoven and are you experiencing problems with your space, the house owner or the housing costs? Then Huurteam Eindhoven may be able to help you with your problems. Together with you, they can look for a fitting solution. They offer personal advice, communication with the house owner and other varying services to help you with your housing problems. This is offered for free! You can contact the huurteam for more information:</Typography>
             <Typography paragraph variant="body3">Webiste: <OutboundLink href="https://huurteameindhoven.nl/en/">www.huurteameindhoven.nl</OutboundLink></Typography>
             <Typography paragraph variant="body3">Email: <OutboundLink href="mailto:info@huurteameindhoven.nl">info@huurteameindhoven.nl</OutboundLink></Typography>
+            <Spacer spacing={2}/>  
+            <Typography variant="h5">Housing Committee</Typography>
+            <Image fluid={data.contentfulHousingPage.housingCommitteePhoto.fluid} ></Image>
             <Spacer spacing={4}/>
         </BaseLayout>
     )
@@ -43,6 +52,11 @@ query getHousingPage {
               url
             }
           }
+        housingCommitteePhoto {
+            fluid(quality: 100) {
+                ...GatsbyContentfulFluid_withWebp_noBase64
+            }
+        }
       }
   }
 `
