@@ -5,11 +5,12 @@ import { makeStyles} from "@material-ui/core"
  
 const useStyles = makeStyles({
     container: {
-      marginLeft: "15px !important",
+      marginLeft: "15px",
       color: "white",
       padding: "90px 0px",
       "@media (min-width: 900px)": {
-        marginLeft: "0px !important",
+        margin: "0 auto",
+        maxWidth: "1080px"
       }
     },
   })

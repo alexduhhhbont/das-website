@@ -20,7 +20,7 @@ export default function AssociationsGrid() {
           {associations.map((entry) => (
             <Grid item xs={3}>
               <a className="associationLink" href={entry.url} target="_blank">
-                    <Img objectFit="contain" fluid={entry.logo.fluid} alt="association" style={{height: "100%", width: "100%", objectFit: "contain"}}></Img>
+                    <img src={entry.logo.file.url} style={{height: "150px", width: "150px", objectFit: "contain"}}/>
               </a>
             </Grid>
           ))}
@@ -38,6 +38,10 @@ const getAssociations = graphql`
           fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
+          file {
+            url
+          }
+
         }
       }
     }

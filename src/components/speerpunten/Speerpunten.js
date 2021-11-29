@@ -34,11 +34,12 @@ export default function Speerpunten() {
 
 const getSpeerpunten = graphql`
   query getSpeerpunten {
-    allContentfulStandpunten {
+    allContentfulStandpunten(sort: { fields: [order], order: ASC }) {
         nodes {
           standpunt {
             standpunt
           }
+          order
           elaboration {
             elaboration
           }
