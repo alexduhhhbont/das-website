@@ -7,7 +7,7 @@ export default function Vote() {
 
     React.useEffect(() => {
         const id = setTimeout(() => {
-          setShouldRedirect(true);
+          setShouldRedirect(false);
         }, 4000);
     
         return () => clearTimeout(id);
@@ -20,7 +20,7 @@ export default function Vote() {
         )
     } 
     return (
-        <div style={{width: "100vw", height: "100vh", backgroundColor: "#95B6D2", margin: "0px", padding: "0px", overflow: "hidden"}}>
+        <div style={{width: "100vw", height: "100vh", backgroundColor: "#95B6D2", margin: "0 !important", padding: "0 !important", overflow: "hidden", position: "absolute", top: "0", left: "0"}}>
             <div style={{justifyContent: "center", display: "grid", padding: "90px"}}>
                 <div style={{width: "100%", height: "100%", display: "flex", justifyContent: "center"}}>
                     <img src={logo} alt="logo" style={{height: "100px"}}/>
