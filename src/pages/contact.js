@@ -7,10 +7,15 @@ import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 import FacebookIcon from '@mui/icons-material/Facebook';    
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { Helmet } from "react-helmet"
 
 export default function Contact() {
     return (
         <BaseLayout>
+              <Helmet>
+                <meta charSet="utf-8" />
+                <title>Contact - DAS Eindhoven</title>
+            </Helmet>
 
             <Spacer spacing={4}/>
 

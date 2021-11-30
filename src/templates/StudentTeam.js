@@ -11,12 +11,17 @@ import { Typography } from '@mui/material';
 import { Description } from '@material-ui/icons';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { Helmet } from "react-helmet"
 
 const StudentTeamPage = ({ data }) => {
   const { name, image, description, vacanciesList, url } = data.contentfulStudentTeam
 
   return (
     <BaseLayout>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>{name} - DAS Eindhoven</title>
+        </Helmet>
         <Spacer spacing={4}/>
           <SectionTitle title={name}/>
         <Spacer spacing={4}/>

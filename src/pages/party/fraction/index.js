@@ -6,6 +6,7 @@ import FractieRij from '../../../components/fractie/FractieRij';
 import Typography from '@mui/material/Typography';
 import Image from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 const FractionPage = ({data}) => {
 
@@ -15,6 +16,10 @@ const FractionPage = ({data}) => {
 
     return (
         <BaseLayout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Fraction - DAS Eindhoven</title>
+            </Helmet>
             <Spacer spacing={4}/>
             <SectionTitle title="Current Fraction"/>
             <Spacer spacing={2}/>
