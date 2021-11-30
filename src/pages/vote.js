@@ -7,7 +7,7 @@ export default function Vote() {
 
     React.useEffect(() => {
         const id = setTimeout(() => {
-          setShouldRedirect(false);
+          setShouldRedirect(true);
         }, 4000);
     
         return () => clearTimeout(id);
