@@ -20,7 +20,7 @@ export default function Vote() {
         )
     } 
     return (
-        <div style={{width: "100vw", height: "100vh", backgroundColor: "#95B6D2"}}>
+        <div style={{width: "100vw", height: "100vh", backgroundColor: "#95B6D2", margin: "0px", padding: "0px", overflow: "hidden"}}>
             <div style={{justifyContent: "center", display: "grid", padding: "90px"}}>
                 <div style={{width: "100%", height: "100%", display: "flex", justifyContent: "center"}}>
                     <img src={logo} alt="logo" style={{height: "100px"}}/>
@@ -28,7 +28,7 @@ export default function Vote() {
                 <div style={{width: "100%", height: "100%", display: "flex", justifyContent: "center", marginTop: "120px"}}>
                     <LoadingIcons.Puff />
                 </div>
-                <h3 style={{color: "white", marginTop: "30px", textAlign: "center", fontSize: "24px"}}>Redirecting you to vote...</h3>
+                <h3 style={{color: "white", marginTop: "30px", textAlign: "center", fontSize: "24px", fontFamily: "Montserrat"}}>Redirecting you to vote...</h3>
             </div>
         </div>
     )
