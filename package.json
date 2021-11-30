@@ -45,6 +45,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-ig-feed": "^1.0.4",
+    "react-loading-icons": "^1.0.6",
     "react-material-ui-form-validator": "^3.0.0",
     "sass": "^1.42.1",
     "styled-components": "^5.3.3"
