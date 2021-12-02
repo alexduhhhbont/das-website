@@ -85,7 +85,7 @@ export default function Navbar() {
                             </div>
                         </div>
                         <div className="dropdown">
-                            <Link className="dropdown-button" to="/elections">Elections 2021</Link>
+                            <Link className="dropdown-button" to="/">Elections 2021</Link>
                             <div className='dropdown-content blue-background'>
                                 <Link className="nav-link" to="/elections/list">List</Link>
                                 <Link className="nav-link" to="/elections/goals">Vision</Link>

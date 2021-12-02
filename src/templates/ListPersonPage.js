@@ -12,6 +12,7 @@ import Stack from '@mui/material/Stack';
 import Spacer from '../components/spacer/Spacer';
 import Hidden from '@mui/material/Hidden';
 import { makeStyles} from "@material-ui/core"
+import { Helmet } from "react-helmet"
 
 const useStyles = makeStyles({
   gridContainer: {
@@ -39,6 +40,10 @@ const ListPersonPage = ({ data }) => {
 
   return (
     <BaseLayout>
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>List: {naam} - DAS Eindhoven</title>
+            </Helmet>
         <Grid container className={classes.gridContainer}>
             <Grid item xs={12} md={5}>
                 <Image fluid={foto.fluid} className={classes.image}></Image>

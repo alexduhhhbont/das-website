@@ -9,6 +9,7 @@ import Spacer from '../components/spacer/Spacer';
 import { makeStyles} from "@material-ui/core"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Typography, Button } from '@mui/material';
+import { Helmet } from "react-helmet"
 
 const useStyles = makeStyles({
   gridContainer: {
@@ -36,6 +37,10 @@ const FractionMemberPage = ({ data }) => {
 
   return (
     <BaseLayout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Fractielid: {naam}  - DAS Eindhoven</title>
+            </Helmet>
         <Grid container className={classes.gridContainer}>
             <Grid item xs={12} md={5}>
                 <Image fluid={foto.fluid} className={classes.image}></Image>

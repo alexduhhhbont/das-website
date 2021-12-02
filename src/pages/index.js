@@ -64,7 +64,7 @@ const HomePage = ({data}) => {
             <h3>7th and 8th of December</h3>
             <p>DAS focuses on the ambitious students that want to develop themselves 
               alongside their studies.</p>
-            <Button href="https://elections.tue.nl/" variant="contained">Vote now!</Button>
+            <Button href="/vote" variant="contained">Vote now!</Button>
           </div>
 
           <SectionTitle title="Vision 2022"/>

@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Grid from '@mui/material/Grid';
 import Image from "gatsby-image"
 import SectionTitle from '../../components/titles/SectionTitle';
+import { Helmet } from "react-helmet"
 import '../../styles/pages/homepage.css'
 
 export default function ElectionList() {
@@ -12,6 +13,10 @@ export default function ElectionList() {
     const data = useStaticQuery(query)
     return (
         <BaseLayout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Elections List - DAS Eindhoven</title>
+            </Helmet>
             <Spacer spacing={2}/>
             <SectionTitle title="List 2022"/>
             <Spacer spacing={2}/>
