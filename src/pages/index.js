@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 })
 
 const HomePage = ({data}) => {
-  const { title, verkiezingsTijd } = data.contentfulHomePagina
+  const { title, verkiezingsTijd, campaignVideoUrl} = data.contentfulHomePagina
   const { nodes } = data.allContentfulLijstPersoon
   const classes = useStyles()
 
@@ -66,6 +66,23 @@ const HomePage = ({data}) => {
               alongside their studies.</p>
             <Button href="/vote" variant="contained">Vote now!</Button>
           </div>
+
+          {campaignVideoUrl ? (
+          <div className="video">
+            <iframe
+              src={campaignVideoUrl + "?controls=0"}
+              title={"DAS Video"}
+              allow="autoplay; encrypted-media; picture-in-picture"
+              frameBorder="0"
+              webkitallowfullscreen="true"
+              mozallowfullscreen="true"
+              allowFullScreen
+              style={{width: "100%", height: "500px"}}
+            />
+          </div>
+          ) : ("")}
+
+          <Spacer spacing={6}/> 
 
           <SectionTitle title="Vision 2022"/>
 
@@ -121,6 +138,7 @@ query getHomePagina{
   contentfulHomePagina {
     title
     verkiezingsTijd
+    campaignVideoUrl
   }
 
   allContentfulLijstPersoon(sort: { fields: [plek], order: ASC }) {
