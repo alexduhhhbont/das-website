@@ -70,7 +70,7 @@ const HomePage = ({data}) => {
           {campaignVideoUrl ? (
           <div className="video">
             <iframe
-              src={campaignVideoUrl + "?controls=0"}
+              src={campaignVideoUrl + "?autoplay=1&loop=1"}
               title={"DAS Video"}
               allow="autoplay; encrypted-media; picture-in-picture"
               frameBorder="0"
