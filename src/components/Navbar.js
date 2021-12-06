@@ -125,7 +125,8 @@ export default function Navbar() {
                                 <MobileLink className="nav-link" to="/student-teams">Student teams</MobileLink>
                                 <MenuGroup>Elections 2021</MenuGroup>
                                 <MobileLink className="nav-link" to="/elections/list">List 2022</MobileLink>
-                                <MobileLink className="nav-link" to="/elections/goals">Vison 2022</MobileLink>  
+                                <MobileLink className="nav-link" to="/elections/goals">Vision 2022</MobileLink>  
+                                <MobileLink className="nav-link" to="/elections/flyer">Flyer 2022</MobileLink> 
                                 <MenuGroup>Party</MenuGroup>
                                 <MobileLink className="nav-link" to="/party/fraction">Fraction</MobileLink>
                                 <MobileLink className="nav-link" to="/party/board">Board</MobileLink>
