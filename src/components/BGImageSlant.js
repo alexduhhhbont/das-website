@@ -6,8 +6,8 @@ import { withPrefix } from 'gatsby';
 
 export default function BGImageSlant({children}, props) {
     return (
-        props.elections ? (
-        <div className={"background"} style={{ background: `url(${bgimage})`, backgroundSize: "cover" }}>
+        !props.elections ? (
+        <div className={"background"} style={{ background: `url(${bgimage})`, backgroundSize: "cover", backgroundPosition: "center" }}>
             <div className="container">
                 {children}
             </div>

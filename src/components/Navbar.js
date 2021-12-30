@@ -50,8 +50,10 @@ const DrawerNavigation = styled(Drawer)`
 `
 
 export default function Navbar() {
-    const data = useStaticQuery(getMenuItems)
     const [menuOpen, setMenuOpen] = React.useState(false)
+
+    const data = useStaticQuery(getVerkiezingenBool)
+    const verkiezingen = data.allContentfulHomePagina.nodes.verkiezingsTijd
 
     const toggleDrawer = (open) => (event) => {
         if (
@@ -84,13 +86,16 @@ export default function Navbar() {
                                 <Link className="nav-link" to="/party/associations">Associations</Link>
                             </div>
                         </div>
-                        <div className="dropdown">
-                            <Link className="dropdown-button" to="/">Elections 2021</Link>
-                            <div className='dropdown-content blue-background'>
-                                <Link className="nav-link" to="/elections/list">List</Link>
-                                <Link className="nav-link" to="/elections/goals">Vision</Link>
-                            </div>
-                        </div> 
+                        {verkiezingen ? (
+                          <div className="dropdown">
+                              <Link className="dropdown-button" to="/">Elections</Link>
+                              <div className='dropdown-content blue-background'>
+                                  <Link className="nav-link" to="/elections/list">List</Link>
+                                  <Link className="nav-link" to="/elections/goals">Vision</Link>
+                              </div>
+                          </div>
+                        ): ("")}
+ 
                         <Link className="nav-link" to="/housing">Housing</Link>
                         <Link className="nav-link" to="/student-teams">Student teams</Link>
                         <Link className="nav-link" to="/contact">Contact</Link>
@@ -123,10 +128,14 @@ export default function Navbar() {
                                 <MobileLink className="nav-link" to="/contact">Contact</MobileLink>
                                 <MobileLink className="nav-link" to="/housing">Housing</MobileLink>
                                 <MobileLink className="nav-link" to="/student-teams">Student teams</MobileLink>
-                                <MenuGroup>Elections 2021</MenuGroup>
-                                <MobileLink className="nav-link" to="/elections/list">List 2022</MobileLink>
-                                <MobileLink className="nav-link" to="/elections/goals">Vision 2022</MobileLink>  
-                                <MobileLink className="nav-link" to="/elections/flyer">Flyer 2022</MobileLink> 
+                                {verkiezingen ? (
+                                  <>
+                                    <MenuGroup>Elections</MenuGroup>
+                                    <MobileLink className="nav-link" to="/elections/list">List</MobileLink>
+                                    <MobileLink className="nav-link" to="/elections/goals">Vision</MobileLink>  
+                                    <MobileLink className="nav-link" to="/elections/flyer">Flyer</MobileLink> 
+                                  </>
+                                ) : (<></>)}
                                 <MenuGroup>Party</MenuGroup>
                                 <MobileLink className="nav-link" to="/party/fraction">Fraction</MobileLink>
                                 <MobileLink className="nav-link" to="/party/board">Board</MobileLink>
@@ -141,17 +150,12 @@ export default function Navbar() {
     )
 }
 
-const getMenuItems = graphql`
-  query getMenuItems {
-    allContentfulMenuItem {
-        nodes {
-          slug
-          title
-          contentfulchildren {
-            slug
-            title
-          }
-        }
+const getVerkiezingenBool = graphql`
+  query getVerkiezingBool {
+    allContentfulHomePagina {
+      nodes {
+        verkiezingsTijd
       }
+    }
   }
 `
