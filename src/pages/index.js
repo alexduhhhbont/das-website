@@ -37,25 +37,6 @@ const HomePage = ({data}) => {
           <meta charSet="utf-8" />
           <title>De Ambitieuze Student Eindhoven</title>
       </Helmet>
-        
-
-            { verkiezingsTijd ? (
-              ""
-            ) : (
-              <BGImageSlant>
-              <div className="heroText">
-                <h1 className="heroTitle">{title}</h1>
-                <p>DAS focuses on the ambitious students like </p>
-                <p>yourself that want to develop themselves </p>
-                <p>alongside their studies.</p>
-                <Spacer spacing={2}/>
-                <TwoButtons text1="Standpunten" text2="Fractie" url1="/contact" url2="/party/fraction"></TwoButtons>
-              </div>
-              </BGImageSlant>
-            )}
- 
-        
-
         { verkiezingsTijd ? (
           <>
           <BGImageSlant elections></BGImageSlant>
@@ -110,6 +91,17 @@ const HomePage = ({data}) => {
           </>
         ) : (
           <>
+          <BGImageSlant>
+            <div className="heroText">
+              <h1 className="heroTitle">{title}</h1>
+              <p>DAS focuses on the ambitious students like </p>
+              <p>yourself that want to develop themselves </p>
+              <p>alongside their studies.</p>
+              <Spacer spacing={2}/>
+              <TwoButtons text1="Contact" text2="Fractie" url1="/contact" url2="/party/fraction"></TwoButtons>
+            </div>
+          </BGImageSlant>
+
           <SectionTitle title="Vision"/>
 
           <Spacer spacing={2}/>
