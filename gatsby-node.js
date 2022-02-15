@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const electionListTemplate = path.resolve('./src/templates/ListPersonPage.js');
 	const fractionMemberTemplate = path.resolve('./src/templates/FractionMember.js');
   const studentTeamTemplate = path.resolve('./src/templates/StudentTeam.js');
+  const newsTemplate = path.resolve('./src/templates/NewsMessage.js');
 
   	// Individual Lijst persons
 	const listPersons = graphql(`
@@ -75,5 +76,28 @@ exports.createPages = async ({ graphql, actions }) => {
   )
   });
 
-  return Promise.all([listPersons, fractionMember, studentTeam]);
+    //Individual news message
+	const newsMessage = graphql(`
+  query getNews {
+    allContentfulNews {
+      nodes {
+        slug
+        }
+      }
+    }
+  `).then(result => {
+  if (result.errors) {
+    Promise.reject(result.errors);
+  }
+
+  result.data.allContentfulNews.nodes.forEach(({ slug }) =>
+  createPage({
+    path: "/news/" + slug,
+    component: newsTemplate,
+    context: { slug },
+  })
+  )
+  });
+
+  return Promise.all([listPersons, fractionMember, studentTeam, newsMessage]);
 };

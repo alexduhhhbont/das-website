@@ -1,0 +1,12 @@
+:root {
+    --swiper-theme-color: #000 !important;
+}
+
+.swiper-slide{
+    margin-bottom: 45px;
+}
+
+.swiper-pagination.swiper-pagination-progressbar{
+    top: inherit !important;
+    bottom: 0px;
+}

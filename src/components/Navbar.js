@@ -95,7 +95,7 @@ export default function Navbar() {
                               </div>
                           </div>
                         ): ("")}
- 
+                        <Link className="nav-link" to="/news">Updates</Link>
                         <Link className="nav-link" to="/housing">Housing</Link>
                         <Link className="nav-link" to="/student-teams">Student teams</Link>
                         <Link className="nav-link" to="/contact">Contact</Link>
@@ -125,6 +125,7 @@ export default function Navbar() {
                                 <SectionTitle title="DAS"/>
                                 <Spacer spacing={2}/> 
                                 <MobileLink className="nav-link" to="/">Home</MobileLink>
+                                <MobileLink className="nav-link" to="/news">Updates</MobileLink>
                                 <MobileLink className="nav-link" to="/contact">Contact</MobileLink>
                                 <MobileLink className="nav-link" to="/housing">Housing</MobileLink>
                                 <MobileLink className="nav-link" to="/student-teams">Student teams</MobileLink>

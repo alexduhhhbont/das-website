@@ -16,6 +16,7 @@ import {
   Hidden,
 } from "@material-ui/core"
 import { Helmet } from "react-helmet"
+import NewsSlider from '../components/news/news_slider';
 
 const useStyles = makeStyles({
   image: {
@@ -98,7 +99,7 @@ const HomePage = ({data}) => {
               <p>yourself that want to develop themselves </p>
               <p>alongside their studies.</p>
               <Spacer spacing={2}/>
-              <TwoButtons text1="Contact" text2="Fractie" url1="/contact" url2="/party/fraction"></TwoButtons>
+              <TwoButtons text1="Contact" text2="Fraction" url1="/contact" url2="/party/fraction"></TwoButtons>
             </div>
           </BGImageSlant>
 
@@ -107,6 +108,14 @@ const HomePage = ({data}) => {
           <Spacer spacing={2}/>
   
           <Speerpunten/>
+
+          <Spacer spacing={6}/>
+
+          <SectionTitle title="Updates"/>
+
+          <Spacer spacing={2}/>
+  
+          <NewsSlider/>
 
           <Spacer spacing={6}/>
 

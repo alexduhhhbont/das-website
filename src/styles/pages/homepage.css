@@ -28,33 +28,15 @@
         margin-bottom: 30px;
         color: white;
     }
-}
 
-.heroText{
-    padding: 60px;
-    background-color: rgba(149, 182, 210, 0.8);
-    width: max-content;
-    height: 400px;
-    color: white;
-}
-
-.heroTitle{
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.electionsListPerson a .gatsby-image-wrapper picture img:hover{
-    transform: scale(1.05);
-    transition: all .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-.electionListGrid{
-    width: 100vw !important;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    .heroText{
+        padding: 60px;
+        background-color: rgba(149, 182, 210, 0.8);
+        width: max-content;
+        height: 400px;
+        color: white;
+        justify-content: start;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -87,5 +69,36 @@
     margin: 0 auto;
     margin-bottom: 30px;
     color: white;
+}
+
+.heroText{
+    padding: 15px;
+    background-color: rgba(149, 182, 210, 0.8);
+    width: max-content;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.heroTitle{
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.electionsListPerson a .gatsby-image-wrapper picture img:hover{
+    transform: scale(1.05);
+    transition: all .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.electionListGrid{
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 }

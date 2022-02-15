@@ -6,10 +6,7 @@
         background-position: center;
         background-size: cover;
         position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        margin-left: calc(-50vw + 50%);
         -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
         clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
     }
@@ -33,17 +30,13 @@
 
 .background{
     width: 100vw;
-    height: 400px;
+    height: 430px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
-    clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
+    margin-left: calc(-50vw + 50%);
+    margin-bottom: 60px;
 }
 
 .background-elections{
