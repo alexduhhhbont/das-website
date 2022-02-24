@@ -16,6 +16,7 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
