@@ -13,7 +13,7 @@ import 'swiper/css/scrollbar';
 import styled from "styled-components";
 
 const Overlay = styled.div`
-    position: absolute;
+    position: relative;
     z-index: 99;
     height: 500px;
     width: 100%;
@@ -114,11 +114,10 @@ export default function NewsSlider() {
                     ) : 
                     (
                     <>
-                        <Overlay>
+                        <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + entry.header.fixed.src + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
                             <Title>{entry.title}</Title>
                             <ReadMore>Read more</ReadMore>
                         </Overlay>
-                        <Image component="img" fluid={entry.header.fluid} style={{height: "500px", width: "100%", borderRadius: "15px"}} alt="fractieFoto"></Image>
                     </>
                     )}
                 </Link>
@@ -147,6 +146,9 @@ const getNews = graphql`
         header {
             fluid(maxWidth: 1920, maxHeight: 1080, quality: 80) {
               ...GatsbyContentfulFluid_withWebp_noBase64
+            }
+            fixed(quality: 100){
+              src
             }
           }
       }
