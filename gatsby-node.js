@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const fractionMemberTemplate = path.resolve('./src/templates/FractionMember.js');
   const studentTeamTemplate = path.resolve('./src/templates/StudentTeam.js');
   const newsTemplate = path.resolve('./src/templates/NewsMessage.js');
-  const municipalityPartyTemplate = path.resolve('./src/pages/gemeenteraadsverkiezingen/partij/municipalityParty.js')
+  const municipalityPartyTemplate = path.resolve('./src/templates/municipalityParty.js')
 
   	// Individual Lijst persons
 	const listPersons = graphql(`

@@ -1,10 +1,10 @@
 import React from 'react'
-import BaseLayout from '../../../layouts/BaseLayout';
+import BaseLayout from '../layouts/BaseLayout';
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import { makeStyles} from "@material-ui/core"
 import { Helmet } from "react-helmet"
-import Spacer from '../../../components/spacer/Spacer';
+import Spacer from '../components/spacer/Spacer';
 import styled from "styled-components";
 import { Link } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
