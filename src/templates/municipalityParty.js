@@ -2,6 +2,7 @@ import React from 'react'
 import BaseLayout from '../layouts/BaseLayout';
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { makeStyles} from "@material-ui/core"
 import { Helmet } from "react-helmet"
 import Spacer from '../components/spacer/Spacer';
@@ -72,13 +73,13 @@ const ListPersonPage = ({ data }) => {
                // <Image component="img" fluid={header.fluid} style={{height: "500px", width: "100vw", marginLeft: "calc(-50vw + 50%)"}} alt="fractieFoto"></Image>
             )}
             <Spacer spacing={6}/>
-            <BackToOverview to='/gemeenteraadsverkiezingen/partij'>Back</BackToOverview>
+            <BackToOverview to='/gemeenteraadsverkiezingen/'>Back</BackToOverview>
             <Spacer spacing={1}/>
-            <div style={{display: "grid", gridTemplateColumns: "repeat(1fr, 4)", gridGap: "15px"}}>
-                <div style={{gridColumn: "1/2"}}>
-                    <Image component="img" fluid={logo.fluid} alt="logoPartij"></Image>
+            <div style={{display: "flex"}}>
+                <div>
+                    <img style={{maxHeight: "80px", marginRight: "30px"}} src={logo.fixed.src} alt="logoPartij"></img>
                 </div>
-                <div style={{gridColumn: "2/5"}}>
+                <div>
                     <h1 style={{marginTop: "0px"}}>{naam}</h1>
                     <div style={{marginTop: "8px"}}>
                         { verkiezingsprogramma ? (
@@ -129,6 +130,9 @@ export const query = graphql`
         logo {
             fluid(maxWidth: 1920, maxHeight: 1080, quality: 100) {
                 ...GatsbyContentfulFluid_withWebp_noBase64
+            }
+            fixed(quality: 100){
+                src
             }
         }
         standpuntBurgerparticipatie {

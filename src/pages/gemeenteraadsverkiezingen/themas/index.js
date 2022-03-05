@@ -60,7 +60,7 @@ export default function themas() {
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/student-housing/"}>
                         <div className='card'>
                             <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
-                                <Title>Studenthousing</Title>
+                                <Title>Studenten huisvesting</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
                         </div>
@@ -70,7 +70,7 @@ export default function themas() {
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/student-city/"}>
                         <div className='card'>
                             <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
-                                <Title>Eindhoven as a student city</Title>
+                                <Title>Studentenstad</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
                         </div>
@@ -80,7 +80,7 @@ export default function themas() {
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/sustainability/"}>
                         <div className='card'>
                             <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
-                                <Title>Sustainability</Title>
+                                <Title>Duurzaamheid</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
                         </div>
@@ -90,7 +90,7 @@ export default function themas() {
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/participation/"}>
                         <div className='card'>
                             <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
-                                <Title>Participation</Title>
+                                <Title>Burgerparticipatie</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
                         </div>
@@ -100,7 +100,7 @@ export default function themas() {
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/mobility/"}>
                         <div className='card'>
                             <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
-                                <Title>Mobility</Title>
+                                <Title>Mobiliteit</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
                         </div>
