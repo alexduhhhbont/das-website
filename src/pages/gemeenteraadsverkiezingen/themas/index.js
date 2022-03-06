@@ -10,6 +10,12 @@ import styled from "styled-components";
 import { Link } from 'gatsby';
 import sustainability from '../../../images/Atlas_TUe_overzicht_1.jpg'
 
+import duurzaamheidAfbeelding from '../../../images/duurzaamheid.jpg'
+import studentenhuisvestingAfbeelding from '../../../images/studentenhuisvesting.jpg'
+import studentenstadAfbeelding from '../../../images/studentenstad.jpg'
+import mobiliteitAfbeelding from '../../../images/mobiliteit.jpg'
+import participatieAfbeelding from '../../../images/participatie.jpg'
+
 const Overlay = styled.div`
     position: relative;
     z-index: 99;
@@ -53,13 +59,13 @@ export default function themas() {
                 <title>Studenten Thema's - Gemeenteraadsverkiezingen Eindhoven</title>
             </Helmet>
             <Spacer spacing={4}/>
-            <SectionTitle title="Gemeenteraadsverkiezingen Studenten Thema's"/>
+            <SectionTitle title="Thema's"/>
             <Spacer spacing={4}/>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={4}>
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/student-housing/"}>
                         <div className='card'>
-                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
+                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + studentenhuisvestingAfbeelding + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
                                 <Title>Studenten huisvesting</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
@@ -69,7 +75,7 @@ export default function themas() {
                 <Grid item xs={12} md={4}>
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/student-city/"}>
                         <div className='card'>
-                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
+                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + studentenstadAfbeelding + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
                                 <Title>Studentenstad</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
@@ -79,7 +85,7 @@ export default function themas() {
                 <Grid item xs={12} md={4}>
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/sustainability/"}>
                         <div className='card'>
-                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
+                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + duurzaamheidAfbeelding + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
                                 <Title>Duurzaamheid</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
@@ -89,7 +95,7 @@ export default function themas() {
                 <Grid item xs={12} md={6}>
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/participation/"}>
                         <div className='card'>
-                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
+                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + participatieAfbeelding + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
                                 <Title>Burgerparticipatie</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
@@ -99,7 +105,7 @@ export default function themas() {
                 <Grid item xs={12} md={6}>
                     <Link className="newsLink" to={"/gemeenteraadsverkiezingen/themas/mobility/"}>
                         <div className='card'>
-                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + sustainability + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
+                            <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + mobiliteitAfbeelding + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
                                 <Title>Mobiliteit</Title>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>

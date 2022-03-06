@@ -79,7 +79,7 @@ export default function Navbar() {
                         
                         
                         <div className="dropdown">
-                            <Link className="dropdown-button" to="/about">About DAS</Link>
+                            <Link className="dropdown-button" to="/about">About</Link>
                             <div className='dropdown-content blue-background'>
                                 <Link className="nav-link" to="/party/fraction">Fraction</Link>
                                 <Link className="nav-link" to="/party/board">Board</Link>
@@ -96,8 +96,14 @@ export default function Navbar() {
                           </div>
                         ): ("")}
                         <Link className="nav-link" to="/news">Updates</Link>
-                        <Link className="nav-link" to="/housing">Housing</Link>
-                        <Link className="nav-link" to="/student-teams">Student teams</Link>
+                        <div className="dropdown">
+                            <Link className="dropdown-button" to="/">Subjects</Link>
+                            <div className='dropdown-content blue-background'>
+                              <Link className="nav-link" to="/gemeenteraadsverkiezingen">Municipal elections</Link>
+                              <Link className="nav-link" to="/housing">Housing</Link>
+                              <Link className="nav-link" to="/student-teams">Student teams</Link>
+                            </div>
+                        </div>
                         <Link className="nav-link" to="/contact">Contact</Link>
                     </div>
                     </Hidden>
@@ -126,6 +132,7 @@ export default function Navbar() {
                                 <Spacer spacing={2}/> 
                                 <MobileLink className="nav-link" to="/">Home</MobileLink>
                                 <MobileLink className="nav-link" to="/news">Updates</MobileLink>
+                                <MobileLink className="nav-link" to="/gemeenteraadsverkiezingen">Municipal Elections</MobileLink>
                                 <MobileLink className="nav-link" to="/contact">Contact</MobileLink>
                                 <MobileLink className="nav-link" to="/housing">Housing</MobileLink>
                                 <MobileLink className="nav-link" to="/student-teams">Student teams</MobileLink>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from 'gatsby';
@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 import styled from "styled-components";
 
 const Overlay = styled.div`
@@ -96,7 +97,8 @@ export default function NewsSlider() {
               spaceBetween: 45,
             },
           }}
-        pagination={true}
+        pagination={{ clickable: true }}
+        autoplay
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       >

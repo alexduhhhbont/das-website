@@ -28,7 +28,9 @@ export default function ThemaStudentCity() {
             {data.allContentfulGemeenteraadsverkiezingPartij.nodes.map((entry) => (
                 <>
                 <div style={{display: "flex", alignItems: "start"}}>
+                    <Link to={'/gemeenteraadsverkiezingen/partij/' + entry.slug}>
                     <img style={{width: "80px", objectFit: "contain", marginRight: "30px", marginTop: "20px"}} src={entry.logo.fixed.src} alt="logoPartij"></img>
+                    </Link>
                     <div className='blog_content'>
                     {documentToReactComponents(JSON.parse(entry.standpuntStudentenstad.raw))}
                     </div>
