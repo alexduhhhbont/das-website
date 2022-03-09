@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import fractie1 from '../../images/1.JoëlleBink.jpg'
 import '../../styles/components/AssociationGrid.css'
 import Spacer from '../spacer/Spacer';
 import Img from "gatsby-image"
