@@ -7,10 +7,11 @@ import Spacer from '../components/spacer/Spacer';
 import Speerpunten from '../components/speerpunten/Speerpunten';
 import SectionTitle from '../components/titles/SectionTitle';
 import FractieRij from '../components/fractie/FractieRij';
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Grid from '@mui/material/Grid';
 import Image from "gatsby-image"
 import Button from '@mui/material/Button';
+import styled from "styled-components";
 import { makeStyles} from "@material-ui/core"
 import {
   Hidden,
@@ -28,9 +29,24 @@ const useStyles = makeStyles({
 })
 
 const HomePage = ({data}) => {
-  const { title, verkiezingsTijd, campaignVideoUrl} = data.contentfulHomePagina
+  const { title, verkiezingsTijd, campaignVideoUrl, ctaLink, ctaText, ctaAfbeelding, ctaDescriptions} = data.contentfulHomePagina
   const { nodes } = data.allContentfulLijstPersoon
   const classes = useStyles()
+
+  const ReadMore = styled(Link)`
+    padding: 8px 15px;
+    border-radius: 15px;
+    border: 2px solid white;
+    color: #3075bc;
+    background: white;
+    display: inline-block;
+
+    &:hover {
+        color: white;
+        background: #3075bc;
+        border: 2px solid white;
+  },
+`;
 
   return (
       <BaseLayout>
@@ -111,6 +127,23 @@ const HomePage = ({data}) => {
 
           <Spacer spacing={6}/>
 
+          <div style={{width: "100vw", marginLeft: "calc(-50vw + 50%)", background: "url(" + ctaAfbeelding.file.url + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
+            <div style={{maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr"}}>
+              <div style={{background: "#3075bc", padding: "90px", transform: "skewX(-15deg)"}}>
+                <div style={{transform: "skewX(15deg"}}>
+                <h2 style={{color: "white"}}>{ctaText}</h2>
+                <p style={{color: "white"}}>{ctaDescriptions.internal.content}</p>
+                <Spacer spacing={2}/>
+                <ReadMore to={ctaLink}>Read more</ReadMore>
+                </div>
+              </div>
+              <div>
+              </div>
+            </div>
+          </div>
+
+          <Spacer spacing={6}/>
+
           <SectionTitle title="Updates"/>
 
           <Spacer spacing={2}/>
@@ -140,6 +173,24 @@ query getHomePagina{
     title
     verkiezingsTijd
     campaignVideoUrl
+    ctaText
+    ctaDescriptions{
+      internal {
+        content
+      }
+    }
+    ctaAfbeelding{
+      fluid(quality: 100) {
+        ...GatsbyContentfulFluid_withWebp_noBase64
+      }
+      fixed(quality: 100){
+        src
+      }
+      file {
+        url
+      }
+    }
+    ctaLink
   }
 
   allContentfulLijstPersoon(sort: { fields: [plek], order: ASC }) {
