@@ -6,7 +6,8 @@ exports.createPages = async ({ graphql, actions }) => {
 	const fractionMemberTemplate = path.resolve('./src/templates/FractionMember.js');
   const studentTeamTemplate = path.resolve('./src/templates/StudentTeam.js');
   const newsTemplate = path.resolve('./src/templates/NewsMessage.js');
-  const municipalityPartyTemplate = path.resolve('./src/templates/municipalityParty.js')
+  const municipalityPartyTemplate = path.resolve('./src/templates/municipalityParty.js');
+  const publicationTemplate = path.resolve('./src/templates/Publication.js');
 
   	// Individual Lijst persons
 	const listPersons = graphql(`
@@ -123,5 +124,28 @@ exports.createPages = async ({ graphql, actions }) => {
     )
     });
 
-  return Promise.all([listPersons, fractionMember, studentTeam, newsMessage, gemeentePartij]);
+      //Publicaties
+      const publication = graphql(`
+      query getPublications {
+        allContentfulPublications {
+          nodes {
+            slug
+            }
+          }
+        }
+      `).then(result => {
+      if (result.errors) {
+        Promise.reject(result.errors);
+      }
+    
+      result.data.allContentfulPublications.nodes.forEach(({ slug }) =>
+      createPage({
+        path: "/publications/" + slug,
+        component: publicationTemplate,
+        context: { slug },
+      })
+      )
+      });
+
+  return Promise.all([listPersons, fractionMember, studentTeam, newsMessage, gemeentePartij, publication]);
 };

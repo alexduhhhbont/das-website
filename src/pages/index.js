@@ -128,9 +128,9 @@ const HomePage = ({data}) => {
           <Spacer spacing={6}/>
 
           <div style={{width: "100vw", marginLeft: "calc(-50vw + 50%)", background: "url(" + ctaAfbeelding.file.url + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
-            <div style={{maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr"}}>
-              <div style={{background: "#3075bc", padding: "90px", transform: "skewX(-15deg)"}}>
-                <div style={{transform: "skewX(15deg"}}>
+            <div style={{maxWidth: "1080px", margin: "0 auto"}}>
+              <div style={{background: "#3075bc", padding: "90px"}}>
+                <div>
                 <h2 style={{color: "white"}}>{ctaText}</h2>
                 <p style={{color: "white"}}>{ctaDescriptions.internal.content}</p>
                 <Spacer spacing={2}/>

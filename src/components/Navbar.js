@@ -96,6 +96,7 @@ export default function Navbar() {
                           </div>
                         ): ("")}
                         <Link className="nav-link" to="/news">Updates</Link>
+                        <Link className="nav-link" to="/publications">Publications</Link>
                         <div className="dropdown">
                             <Link className="dropdown-button" to="/">Subjects</Link>
                             <div className='dropdown-content blue-background'>

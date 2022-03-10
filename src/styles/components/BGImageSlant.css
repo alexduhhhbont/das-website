@@ -1,41 +1,13 @@
-@media only screen and (min-width: 900px) {
-    .background{
-        width: 100vw;
-        height: 400px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        margin-left: calc(-50vw + 50%);
-        -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
-        clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
-    }
-
-    .background-elections{
-        width: 100vw;
-        height: 400px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-blend-mode: soft-light;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 40%, 0 100%);
-        clip-path: polygon(0 0, 100vw 0, 100vw 40%, 0 100%);
-    }
-}
-
 .background{
     width: 100vw;
-    height: 430px;
+    height: 400px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
     margin-left: calc(-50vw + 50%);
+    -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
+    clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
     margin-bottom: -45px;
 }
 
@@ -51,4 +23,34 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 40%, 0 100%);
+    clip-path: polygon(0 0, 100vw 0, 100vw 40%, 0 100%);
+}
+
+@media only screen and (max-width: 900px) {
+
+.background{
+    width: 100vw;
+    height: 430px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    margin-bottom: 0px;
+}
+
+.background-elections{
+    width: 100vw;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
 }
