@@ -37,7 +37,9 @@
     background-size: cover;
     position: relative;
     margin-left: calc(-50vw + 50%);
-    margin-bottom: 0px;
+    margin-bottom: 30px;
+    clip-path: none;
+    -webkit-clip-path: none;
 }
 
 .background-elections{
@@ -52,5 +54,7 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    clip-path: none;
+    -webkit-clip-path: none;
 }
 }
