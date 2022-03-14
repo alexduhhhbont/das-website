@@ -17,7 +17,7 @@ import {
   Hidden,
 } from "@material-ui/core"
 import { Helmet } from "react-helmet"
-import NewsSlider from '../components/news/news_slider';
+import NewsSlider from '../components/updates/updates_slider';
 
 const useStyles = makeStyles({
   image: {

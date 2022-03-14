@@ -51,9 +51,9 @@ export default function NewsGrid() {
 
     return (
         <Grid container spacing={2}>
-            {data.allContentfulNews.nodes.map((entry) => (
+            {data.allContentfulUpdates.nodes.map((entry) => (
                 <Grid item xs={12} md={4}>
-                    <Link className="newsLink" to={"/news/" + entry.slug}>
+                    <Link className="newsLink" to={"/updates/" + entry.slug}>
                         { entry.header == null ? 
                         (
                             <div>
@@ -83,7 +83,7 @@ export default function NewsGrid() {
 
 const getAllNews = graphql`
   query getNewsMessagesAll {
-    allContentfulNews(sort: {order: DESC, fields: createdAt}) {
+    allContentfulUpdates(sort: {order: DESC, fields: createdAt}) {
       nodes {
         title
         slug

@@ -8,7 +8,7 @@ import Spacer from '../components/spacer/Spacer';
 import styled from "styled-components";
 import { Link } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import '../styles/templates/newsMessage.css';
+import '../styles/templates/updatesMessage.css';
 
 const useStyles = makeStyles({
   gridContainer: {
@@ -35,7 +35,7 @@ const BackToOverview = styled(Link)`
 `;
 
 const ListPersonPage = ({ data }) => {
-  const { slug, header, title, tekst } = data.contentfulNews
+  const { slug, header, title, tekst } = data.contentfulUpdates
 
   const classes = useStyles()
 
@@ -54,7 +54,7 @@ const ListPersonPage = ({ data }) => {
                 <Image component="img" fluid={header.fluid} style={{height: "500px", width: "100vw", marginLeft: "calc(-50vw + 50%)"}} alt="fractieFoto"></Image>
             )}
             <Spacer spacing={6}/>
-            <BackToOverview to='/news'>Back</BackToOverview>
+            <BackToOverview to='/updates'>Back</BackToOverview>
             <Spacer spacing={1}/>
              <h1 style={{marginTop: "0px"}}>{title}</h1>
              <Spacer spacing={2}/>
@@ -69,7 +69,7 @@ const ListPersonPage = ({ data }) => {
 
 export const query = graphql`
   query getNewsMessage($slug: String!) {
-    contentfulNews(slug: { eq: $slug }) {
+    contentfulUpdates(slug: { eq: $slug }) {
       slug
       title
       header {
