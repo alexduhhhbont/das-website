@@ -13,14 +13,6 @@ import styled from "styled-components"
 import SectionTitle from '../components/titles/SectionTitle';
 import Spacer from '../components/spacer/Spacer';
   
-const AbsoluteMenuButton = styled(IconButton)`\
-  z-index: 10;
-  position: absolute;
-  right: 15px;
-  top: 30px;
-  color: white;
-`
-
 const ListItemContainerMobile = styled.div`
   display: flex;
   flex-direction: column;
@@ -95,7 +87,7 @@ export default function Navbar() {
                               </div>
                           </div>
                         ): ("")}
-                        <Link className="nav-link" to="/news">Updates</Link>
+                        <Link className="nav-link" to="/updates">Updates</Link>
                         <Link className="nav-link" to="/publications">Publications</Link>
                         <div className="dropdown">
                             <Link className="dropdown-button" to="/">Subjects</Link>
@@ -111,28 +103,29 @@ export default function Navbar() {
 
                           {/* Mobile Navigation */}
                     <Hidden lgUp>
-                        <AbsoluteMenuButton
+                        <IconButton
                         edge="start"
                         color="primary"
                         onClick={toggleDrawer(true)}
                         aria-label="menu"
+                        style={{position: "absolute", zIndex: "999", top: "30px", right: "15px", color: "white"}}
                         >
                         <MenuIcon />
-                        </AbsoluteMenuButton>
+                        </IconButton>
                         <DrawerNavigation
                         anchor={"right"}
                         open={menuOpen}
                         onClose={toggleDrawer(false)}
                         >
                         <ListFullWidth>
-                            <AbsoluteMenuButton onClick={toggleDrawer(false)}>
+                            <IconButton style={{position: "absolute", zIndex: "999", top: "30px", right: "15px"}} onClick={toggleDrawer(false)}>
                             <CloseIcon style={{color: "#0E345F"}}/>
-                            </AbsoluteMenuButton>
+                            </IconButton>
                             <ListItemContainerMobile>
                                 <SectionTitle title="DAS"/>
                                 <Spacer spacing={2}/> 
                                 <MobileLink className="nav-link" to="/">Home</MobileLink>
-                                <MobileLink className="nav-link" to="/news">Updates</MobileLink>
+                                <MobileLink className="nav-link" to="/updates">Updates</MobileLink>
                                 <MobileLink className="nav-link" to="/publications">Publications</MobileLink>
                                 <MobileLink className="nav-link" to="/gemeenteraadsverkiezingen">Municipal Elections</MobileLink>
                                 <MobileLink className="nav-link" to="/contact">Contact</MobileLink>

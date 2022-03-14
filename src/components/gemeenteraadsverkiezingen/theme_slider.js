@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from 'gatsby';
 import Image from "gatsby-image"
-import '../../styles/components/NewsSlider.css'
+import '../../styles/components/updatesSlider.css'
 
 import duurzaamheidAfbeelding from '../../images/duurzaamheid.jpg'
 import studentenhuisvestingAfbeelding from '../../images/studentenhuisvesting.jpg'

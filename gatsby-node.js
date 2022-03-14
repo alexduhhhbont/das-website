@@ -5,7 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const electionListTemplate = path.resolve('./src/templates/ListPersonPage.js');
 	const fractionMemberTemplate = path.resolve('./src/templates/FractionMember.js');
   const studentTeamTemplate = path.resolve('./src/templates/StudentTeam.js');
-  const newsTemplate = path.resolve('./src/templates/NewsMessage.js');
+  const newsTemplate = path.resolve('./src/templates/updateMessage.js');
   const municipalityPartyTemplate = path.resolve('./src/templates/municipalityParty.js');
   const publicationTemplate = path.resolve('./src/templates/Publication.js');
 
@@ -81,7 +81,7 @@ exports.createPages = async ({ graphql, actions }) => {
     //Individual news message
 	const newsMessage = graphql(`
   query getNews {
-    allContentfulNews {
+    allContentfulUpdates {
       nodes {
         slug
         }
@@ -92,9 +92,9 @@ exports.createPages = async ({ graphql, actions }) => {
     Promise.reject(result.errors);
   }
 
-  result.data.allContentfulNews.nodes.forEach(({ slug }) =>
+  result.data.allContentfulUpdates.nodes.forEach(({ slug }) =>
   createPage({
-    path: "/news/" + slug,
+    path: "/updates/" + slug,
     component: newsTemplate,
     context: { slug },
   })

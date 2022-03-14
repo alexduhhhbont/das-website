@@ -2,9 +2,9 @@ import React from 'react'
 import BaseLayout from '../layouts/BaseLayout';
 import SectionTitle from '../components/titles/SectionTitle';
 import Spacer from '../components/spacer/Spacer';
-import NewsGrid from '../components/news/news_grid';
+import NewsGrid from '../components/updates/updates_grid';
 
-export default function News() {
+export default function Updates() {
     return (
         <BaseLayout>
             <Spacer spacing={6}/>

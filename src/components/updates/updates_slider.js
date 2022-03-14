@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from 'gatsby';
 import Image from "gatsby-image"
-import '../../styles/components/NewsSlider.css'
+import '../../styles/components/updatesSlider.css'
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -102,9 +102,9 @@ export default function NewsSlider() {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       >
-          {data.allContentfulNews.nodes.map((entry) => (
+          {data.allContentfulUpdates.nodes.map((entry) => (
             <SwiperSlide>
-                <Link className="newsLink" to={"/news/" + entry.slug}>
+                <Link className="newsLink" to={"/updates/" + entry.slug}>
                     { entry.header == null ? 
                     (
                         <>
@@ -126,7 +126,7 @@ export default function NewsSlider() {
             </SwiperSlide>
           ))}
             <SwiperSlide>                
-                <Link className="newsLink" to={"/news"}>
+                <Link className="newsLink" to={"/updates"}>
                 <SeeMore>
                     <Title>All the updates</Title>
                     <ReadMoreWhite>Open</ReadMoreWhite>
@@ -140,7 +140,7 @@ export default function NewsSlider() {
 
 const getNews = graphql`
   query getNewsMessages {
-    allContentfulNews(sort: {order: DESC, fields: createdAt}, limit: 12) {
+    allContentfulUpdates(sort: {order: DESC, fields: createdAt}, limit: 12) {
       nodes {
         title
         slug
