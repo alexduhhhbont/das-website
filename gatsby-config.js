@@ -40,6 +40,8 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    'babel-plugin-styled-components',
+    'styled-components',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
