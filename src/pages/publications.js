@@ -12,7 +12,7 @@ export default function publications() {
         <BaseLayout>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>About - DAS Eindhoven</title>
+                <title>Publications - DAS Eindhoven</title>
             </Helmet>
             <Spacer spacing={4}/>
             <SectionTitle title="Publications"/>

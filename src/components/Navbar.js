@@ -133,6 +133,7 @@ export default function Navbar() {
                                 <Spacer spacing={2}/> 
                                 <MobileLink className="nav-link" to="/">Home</MobileLink>
                                 <MobileLink className="nav-link" to="/news">Updates</MobileLink>
+                                <MobileLink className="nav-link" to="/publications">Publications</MobileLink>
                                 <MobileLink className="nav-link" to="/gemeenteraadsverkiezingen">Municipal Elections</MobileLink>
                                 <MobileLink className="nav-link" to="/contact">Contact</MobileLink>
                                 <MobileLink className="nav-link" to="/housing">Housing</MobileLink>

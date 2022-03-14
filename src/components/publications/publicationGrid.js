@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, StaticQuery, graphql } from "gatsby"
 import { Link } from 'gatsby';
 import styled from "styled-components";
 import Grid from '@mui/material/Grid';
@@ -46,40 +46,47 @@ const Date = styled.h4`
 
 
 
-export default function PublicationsGrid() {
-    const data = useStaticQuery(getAllPublications)
-
+const PublicationsGrid = () => {
     return (
+        <StaticQuery 
+        query={graphql`
+        query getAllPublicationsOrderDate {
+            allContentfulPublications(sort: {fields: date, order: DESC}) {
+              nodes {
+                date(formatString: "LL")
+                title
+                slug
+                afbeelding{
+                          file{
+                              url
+                  }
+                }
+              }
+            }
+          }
+      `}
+      render={data => (
         <Grid container spacing={2}>
-            {data.allContentfulPublications.nodes.map((entry) => (
+            {data.allContentfulPublications.nodes.map(entry => {
+                return(
                 <Grid item xs={12} md={4}>
                     <Link className="newsLink" to={"/publications/" + entry.slug}>
                         <div className='card'>
                             <Overlay style={{background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + entry.afbeelding.file.url + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
                                 <Title>{entry.title}</Title>
+                                <Date>{entry.date}</Date>
                                 <ReadMore>Read more</ReadMore>
                             </Overlay>
                         </div>
                     </Link>
                 </Grid>
-            ))}
+                )
+            })}
         </Grid>
+      )}
+        
+        />
     )
 }
 
-
-const getAllPublications = graphql`
-  query getPublicationsAll {
-    allContentfulPublications(sort: {order: DESC, fields: createdAt}) {
-      nodes {
-        title
-        slug
-        afbeelding{
-            file{
-                url
-            }
-        }
-      }
-    }
-  }
-`
+export default PublicationsGrid

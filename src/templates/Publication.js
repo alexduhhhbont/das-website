@@ -41,7 +41,7 @@ const PublicationPage = ({ data }) => {
     <BaseLayout>
         <Helmet>
             <meta charSet="utf-8" />
-            <title>{title} - DAS Eindhoven</title>
+            <title>Publication: {title} - DAS Eindhoven</title>
         </Helmet>
         <SlantHero backgroundImage={afbeelding.file.url}/>
         <Spacer spacing={4}/>
