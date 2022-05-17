@@ -6,11 +6,29 @@
     background-size: cover;
     position: relative;
     margin-left: calc(-50vw + 50%);
-    -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
-    clip-path: polygon(0 0, 100vw 0, 100vw 20%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 40%, 0 100%);
+    clip-path: polygon(0 0, 100vw 0, 100vw 40%, 0 100%);
     margin-bottom: -45px;
 }
 
+.background .container .social_media{
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    display: flex;
+}
+
+.background .container .social_media .social_media__icon{
+    background-color: white;
+    padding: 8px;
+    border-radius: 15px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+.background .container .social_media .social_media__icon:hover{
+    transform: scale(1.05);
+}
 .background-elections{
     width: 100vw;
     height: 400px;
@@ -40,6 +58,10 @@
     margin-bottom: 30px;
     clip-path: none;
     -webkit-clip-path: none;
+}
+
+.background .container .social_media{
+    display: none;
 }
 
 .background-elections{

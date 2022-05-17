@@ -10,6 +10,8 @@ export default function Updates() {
             <Spacer spacing={6}/>
             <SectionTitle title="Updates"/>
             <Spacer spacing={2}/>
+            <p style={{textAlign: "center"}}>Below you find the latest updates from De Ambitieuze Student.</p>
+            <Spacer spacing={2}/>
             <NewsGrid/>
             <Spacer spacing={6}/>
         </BaseLayout>

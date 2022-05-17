@@ -59,45 +59,47 @@ export default function Navbar() {
       }
 
     return (
+        <>
+        <div className='pre-navigation'>
+          <div className='container'>
+            <div className='links'>
+              <Link className='pre-navigation__link' to='/join-das'>Join DAS</Link>
+              <Link className='pre-navigation__link' to='/contact'>Contact</Link>
+            </div>
+          </div>
+        </div>
         <div className="blue-background">
             <div className="container">
                 <nav>
-                    <Link to="/" style={{marginLeft: "15px"}}>
-                        <img src={logo} alt="logo"/>
+                    <Link className='logo_container' to="/">
+                        <img src={logo} alt="logo" className='logo'/>
                     </Link>
 
                     <Hidden mdDown>
                     <div className="links">
                         
-                        
-                        <div className="dropdown">
-                            <Link className="dropdown-button" to="/about">About</Link>
-                            <div className='dropdown-content blue-background'>
-                                <Link className="nav-link" to="/party/fraction">Fraction</Link>
-                                <Link className="nav-link" to="/party/board">Board</Link>
-                                <Link className="nav-link" to="/party/associations">Associations</Link>
-                            </div>
-                        </div>
+                        <Link className="nav-link" to="/">Home</Link>
                         {verkiezingen ? (
                           <div className="dropdown">
                               <Link className="dropdown-button" to="/">Elections</Link>
                               <div className='dropdown-content blue-background'>
-                                  <Link className="nav-link" to="/elections/list">List</Link>
-                                  <Link className="nav-link" to="/elections/goals">Vision</Link>
+                                  <Link className="dropdown__nav-link" to="/elections/list">List</Link>
+                                  <Link className="dropdown__nav-link" to="/elections/goals">Vision</Link>
                               </div>
                           </div>
                         ): ("")}
                         <Link className="nav-link" to="/updates">Updates</Link>
-                        <Link className="nav-link" to="/publications">Publications</Link>
+                        <Link className="nav-link" to="/viewpoints">Viewpoints</Link>
                         <div className="dropdown">
-                            <Link className="dropdown-button" to="/">Subjects</Link>
+                            <Link className="dropdown-button" to="#">About</Link>
                             <div className='dropdown-content blue-background'>
-                              <Link className="nav-link" to="/gemeenteraadsverkiezingen">Municipal elections</Link>
-                              <Link className="nav-link" to="/housing">Housing</Link>
-                              <Link className="nav-link" to="/student-teams">Student teams</Link>
+                                <Link className="dropdown__nav-link" to="/party/fraction">Fraction</Link>
+                                <Link className="dropdown__nav-link" to="/party/board">Board</Link>
+                                <Link className="dropdown__nav-link" to="/party/associations">Associations</Link>
                             </div>
                         </div>
-                        <Link className="nav-link" to="/contact">Contact</Link>
+                        <Link className="nav-link" to="/publications">Publications</Link>
+                        <Link className="nav-link" to="https://intranet.tue.nl/en/university/right-of-say/university-council/">University Council</Link>
                     </div>
                     </Hidden>
 
@@ -150,6 +152,7 @@ export default function Navbar() {
                 </nav>
             </div>
         </div>
+        </>
     )
 }
 

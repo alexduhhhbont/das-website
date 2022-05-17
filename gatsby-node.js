@@ -8,6 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const newsTemplate = path.resolve('./src/templates/updateMessage.js');
   const municipalityPartyTemplate = path.resolve('./src/templates/municipalityParty.js');
   const publicationTemplate = path.resolve('./src/templates/Publication.js');
+  const joinDASTemplate = path.resolve('./src/templates/JoinDASOption.js');
 
   	// Individual Lijst persons
 	const listPersons = graphql(`
@@ -147,5 +148,30 @@ exports.createPages = async ({ graphql, actions }) => {
       )
       });
 
-  return Promise.all([listPersons, fractionMember, studentTeam, newsMessage, gemeentePartij, publication]);
+        	// Individual Lijst persons
+          const JoinDASOption = graphql(`
+          query getAllJoinDASOptions {
+            allContentfulJoinDas {
+                nodes {
+                    slug
+                    title
+                    contactEmail
+                }
+            }
+          }
+        `).then(result => {
+        if (result.errors) {
+          Promise.reject(result.errors);
+        }
+
+        result.data.allContentfulJoinDas.nodes.forEach(({ slug }) =>
+        createPage({
+          path: "join-das/" + slug,
+          component: joinDASTemplate,
+          context: { slug },
+        })
+        )
+        });
+
+  return Promise.all([listPersons, fractionMember, studentTeam, newsMessage, gemeentePartij, publication, JoinDASOption]);
 };

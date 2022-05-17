@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 })
 
 const HomePage = ({data}) => {
-  const { title, verkiezingsTijd, campaignVideoUrl, ctaLink, ctaText, ctaAfbeelding, ctaDescriptions} = data.contentfulHomePagina
+  const { title, verkiezingsTijd, campaignVideoUrl, ctaLink, ctaText, ctaAfbeelding, ctaDescriptions, heroImage} = data.contentfulHomePagina
   const { nodes } = data.allContentfulLijstPersoon
   const classes = useStyles()
 
@@ -56,7 +56,7 @@ const HomePage = ({data}) => {
       </Helmet>
         { verkiezingsTijd ? (
           <>
-          <BGImageSlant elections></BGImageSlant>
+          <BGImageSlant elections backgroundImage={heroImage.file.url}></BGImageSlant>
           <div className="electionsIntroHeroText">
             <h1>Elections 2021</h1>
             <h3>7th and 8th of December</h3>
@@ -108,11 +108,11 @@ const HomePage = ({data}) => {
           </>
         ) : (
           <>
-          <BGImageSlant>
+          <BGImageSlant backgroundImage={heroImage.file.url}>
             <div className="heroText">
               <h1 className="heroTitle">{title}</h1>
-              <p>DAS focuses on the ambitious students like </p>
-              <p>yourself that want to develop themselves </p>
+              <p>DAS focuses on the ambitious students</p>
+              <p> that want to develop themselves</p> 
               <p>alongside their studies.</p>
               <Spacer spacing={2}/>
               <TwoButtons text1="Contact" text2="Fraction" url1="/contact" url2="/party/fraction"></TwoButtons>
@@ -171,6 +171,11 @@ export const query = graphql`
 query getHomePagina{
   contentfulHomePagina {
     title
+    heroImage{
+      file {
+        url
+      }
+    }
     verkiezingsTijd
     campaignVideoUrl
     ctaText

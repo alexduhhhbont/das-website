@@ -16,7 +16,9 @@ export default function publications() {
             </Helmet>
             <Spacer spacing={4}/>
             <SectionTitle title="Publications"/>
-            <Spacer spacing={4}/>
+            <Spacer spacing={2}/>
+            <p style={{textAlign: "center"}}>With De Ambitieuze Student we often write down our vision or do research on certain topics. Below you find all those publications.</p>
+            <Spacer spacing={2}/>
             <PublicationsGrid/>
             <Spacer spacing={4}/>
         </BaseLayout>
