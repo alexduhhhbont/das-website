@@ -104,13 +104,13 @@ export default function Navbar() {
                     </Hidden>
 
                           {/* Mobile Navigation */}
-                    <Hidden lgUp>
+                    <Hidden mdUp>
                         <IconButton
                         edge="start"
                         color="primary"
                         onClick={toggleDrawer(true)}
                         aria-label="menu"
-                        style={{position: "absolute", zIndex: "999", top: "30px", right: "15px", color: "white"}}
+                        style={{position: "absolute", zIndex: "999", top: "46px", right: "5px", color: "white"}}
                         >
                         <MenuIcon />
                         </IconButton>

@@ -32,6 +32,13 @@ p {
     padding: 8px 0px;
 }
 
+@media only screen and (max-width: 900px) {
+    .pre-navigation{
+        background-color: rgb(149, 182, 210);
+        padding: 5px 15px;
+    }
+}
+
 .pre-navigation .container{
     display: flex;
     justify-content: end;
@@ -65,6 +72,13 @@ nav {
 
 nav .logo_container .logo{
     height: 45px;
+}
+
+@media only screen and (max-width: 900px) {
+    nav .logo_container .logo{
+        height: 45px;
+        margin-left: 15px;
+    }
 }
 
 .dropdown-content {
