@@ -6,9 +6,9 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 
-export default function BGImageSlant({children, backgroundImage}, props) {
+export default function BGImageSlant({children, backgroundImage, elections}, props) {
     return (
-        !props.elections ? (
+        !elections ? (
         <div className={"background"} style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="container">
                 <div className='social_media'>
@@ -19,7 +19,7 @@ export default function BGImageSlant({children, backgroundImage}, props) {
             </div>
         </div>
         ) : (
-        <div className={"background-elections"} style={{ background: `rgba(149, 182, 210, 1)`, backgroundSize: "cover" }}>
+        <div className={"background-elections"} style={{ backgroundImage: `url(${backgroundImage}), linear-gradient(0deg, rgba(149, 182, 210, 0.9), rgba(48, 117, 188, 1))`, backgroundSize: "cover" }}>
             <div className="container">
                 {children}
             </div>

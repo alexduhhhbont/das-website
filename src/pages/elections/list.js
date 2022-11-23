@@ -10,6 +10,9 @@ import '../../styles/pages/homepage.css'
 
 export default function ElectionList() {
 
+    const nextYear = new Date().getFullYear() + 1;
+    const listText = "List " + nextYear; 
+
     const data = useStaticQuery(query)
     return (
         <BaseLayout>
@@ -18,7 +21,7 @@ export default function ElectionList() {
                 <title>Elections List - DAS Eindhoven</title>
             </Helmet>
             <Spacer spacing={2}/>
-            <SectionTitle title="List 2022"/>
+            <SectionTitle title={listText}/>
             <Spacer spacing={2}/>
 
             <Grid container className="electionListGrid">

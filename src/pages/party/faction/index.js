@@ -14,18 +14,7 @@ const FractionPage = ({data}) => {
     const fracties = query.allContentfulOudeFractie.nodes
     console.log(fracties)
 
-    return (
-        <BaseLayout>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Fraction - DAS Eindhoven</title>
-            </Helmet>
-            <Spacer spacing={4}/>
-            <SectionTitle title="Current Fraction"/>
-            <Spacer spacing={2}/>
-            <FractieRij/>
-            <Spacer spacing={4}/>
-
+    /* code for previous fractions
             {fracties.map((entry) => (
                 <>
                     <SectionTitle title={entry.jaar}/>
@@ -38,6 +27,22 @@ const FractionPage = ({data}) => {
                     <Spacer spacing={4}/>
                 </>
             ))}
+
+    */
+
+    return (
+        <BaseLayout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Faction - DAS Eindhoven</title>
+            </Helmet>
+            <Spacer spacing={4}/>
+            <SectionTitle title="Current Faction"/>
+            <Spacer spacing={2}/>
+            <p style={{textAlign: "center"}}>The voice of the ambitious student is currently represented by the following students in the university council. If you want to contact one of them, you can click on their picture to find their email.</p>
+            <Spacer spacing={2}/>
+            <FractieRij/>
+            <Spacer spacing={4}/>
 
         </BaseLayout>
     )

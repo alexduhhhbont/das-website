@@ -33,6 +33,8 @@ const HomePage = ({data}) => {
   const { nodes } = data.allContentfulLijstPersoon
   const classes = useStyles()
 
+  const currentYear = new Date().getFullYear()
+
   const ReadMore = styled(Link)`
     padding: 8px 15px;
     border-radius: 15px;
@@ -58,11 +60,11 @@ const HomePage = ({data}) => {
           <>
           <BGImageSlant elections backgroundImage={heroImage.file.url}></BGImageSlant>
           <div className="electionsIntroHeroText">
-            <h1>Elections 2021</h1>
-            <h3>7th and 8th of December</h3>
+            <h1>{'Elections ' + currentYear}</h1>
+            <h3>6th and 7th of December</h3>
             <p>DAS focuses on the ambitious students that want to develop themselves 
               alongside their studies.</p>
-            <Button href="/vote" variant="contained">Vote now!</Button>
+            <Button size="large" href="/vote" variant="contained">Vote!</Button>
           </div>
 
           {campaignVideoUrl ? (
@@ -82,7 +84,7 @@ const HomePage = ({data}) => {
 
           <Spacer spacing={6}/> 
 
-          <SectionTitle title="Vision 2022"/>
+          <SectionTitle title="Vision of DAS"/>
 
           <Spacer spacing={2}/> 
 
@@ -90,7 +92,7 @@ const HomePage = ({data}) => {
 
           <Spacer spacing={6}/> 
 
-          <SectionTitle title="List 2022"/>
+          <SectionTitle title="Our list"/>
 
           <Spacer spacing={2}/> 
 
@@ -98,7 +100,7 @@ const HomePage = ({data}) => {
             {nodes.map((persoon) => (
               
                 <Grid className="electionsListPerson" item xs={6} sm={3} md={2}>
-                  <a href={"/elections/list/" + persoon.slug}>
+                  <a className="electionPersonCard" href={"/elections/list/" + persoon.slug}>
                     <Image fluid={persoon.foto.fluid} className={classes.image}></Image>
                   </a>
                 </Grid>
@@ -115,7 +117,7 @@ const HomePage = ({data}) => {
               <p> that want to develop themselves</p> 
               <p>alongside their studies.</p>
               <Spacer spacing={2}/>
-              <TwoButtons text1="Contact" text2="Fraction" url1="/contact" url2="/party/fraction"></TwoButtons>
+              <TwoButtons text1="Contact" text2="Faction" url1="/contact" url2="/party/faction"></TwoButtons>
             </div>
           </BGImageSlant>
 
@@ -152,7 +154,7 @@ const HomePage = ({data}) => {
 
           <Spacer spacing={6}/>
 
-          <SectionTitle title="Our Fraction"/>
+          <SectionTitle title="Our Faction"/>
 
           <Spacer spacing={2}/>
 

@@ -18,7 +18,7 @@ export default function fraction() {
             <Spacer spacing={4}/>
             <Typography>DAS consists of:</Typography>
             <Typography>Our board, who take care of managing DAS and are our general point of contact;</Typography>
-            <Typography>Our fraction, who take seat in the University Council of the TU/e and deal with policy related matters;</Typography>
+            <Typography>Our faction, who take seat in the University Council of the TU/e and deal with policy related matters;</Typography>
             <Typography>Our adherants, who provide us with valuable input about TU/e related problems and policy.</Typography>
             
             <Spacer spacing={16}/>

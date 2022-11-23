@@ -49,7 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allContentfulFractielid.nodes.forEach(({ slug }) =>
   createPage({
-    path: "party/fraction/" + slug,
+    path: "party/faction/" + slug,
     component: fractionMemberTemplate,
     context: { slug },
   })

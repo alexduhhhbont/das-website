@@ -12,13 +12,13 @@ import Box from '@mui/material/Box';
 export default function BoardRij() {
     return (
         <>
-          <Typography paragraph variant="body3">The board of DAS is responsible for the organization around DAS and consist of the following people:</Typography>
+          <Typography paragraph variant="body3">The board of DAS is responsible for the organization around DAS and consists of the following people:</Typography>
           <Spacer spacing={2}/>
           <Grid container spacing={2}>
               <Grid item xs={12} md={3}>
                   <Card>
                       <Box padding={4}>
-                  <Typography variant="h5">Imke Bloemen</Typography>
+                  <Typography variant="h5">Alex de Bont</Typography>
                   <Typography>Chair</Typography>
                     </Box>
                   </Card>
@@ -26,7 +26,7 @@ export default function BoardRij() {
                 <Grid item xs={12} md={3}>
                   <Card>
                       <Box padding={4}>
-                  <Typography variant="h5">Lucas Poppelaars</Typography>
+                  <Typography variant="h5">Nick Cornielje</Typography>
                   <Typography>Secretary</Typography>
                     </Box>
                   </Card>
@@ -34,7 +34,7 @@ export default function BoardRij() {
                 <Grid item xs={12} md={3}>
                   <Card>
                       <Box padding={4}>
-                  <Typography variant="h5">Sven Leenman</Typography>
+                  <Typography variant="h5">Thijmen Goedings</Typography>
                   <Typography>Treasurer</Typography>
                     </Box>
                   </Card>

@@ -37,6 +37,11 @@
         color: white;
         justify-content: start;
     }
+
+    .electionPersonCard:hover{
+        transform: scale(1.05);
+        transition: all .6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
 }
 
 @media only screen and (max-width: 900px) {

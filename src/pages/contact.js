@@ -30,7 +30,7 @@ export default function Contact() {
             <SectionTitle title="Email"/>
             <Spacer spacing={2}/>
             <Stack spacing={2} style={{textAlign: "center"}}>
-                <Link underline="none" href="mailto:fraction@daseindhoven.nl" style={{color: "black"}}><span style={{fontWeight: "600"}}>Fraction: </span> fraction@daseindhoven.nl</Link>
+                <Link underline="none" href="mailto:fraction@daseindhoven.nl" style={{color: "black"}}><span style={{fontWeight: "600"}}>Faction: </span> fraction@daseindhoven.nl</Link>
                 <Link underline="none" href="mailto:board@daseindhoven.nl" style={{color: "black"}}><span style={{fontWeight: "600"}}>Board: </span> board@daseindhoven.nl</Link>
             </Stack>
             <Spacer spacing={4}/>

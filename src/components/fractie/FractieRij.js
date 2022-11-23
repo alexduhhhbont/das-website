@@ -31,7 +31,7 @@ export default function FractieRij() {
       <Grid container spacing={2}>
         {data.allContentfulFractielid.nodes.map((entry) => (
           <Grid item xs={12} md={gridItemWidth}>
-            <Link className="fractionLink" to={"/party/fraction/" + entry.slug}>
+            <Link className="fractionLink" to={"/party/faction/" + entry.slug}>
               <Card style={{position: "relative"}} className="fractionCard">
                 <div className='nameStroke'><span className='nameSide'>{entry.naam}</span><span className='nameCenter'>{entry.naam}</span><span className='nameSide'>{entry.naam}</span></div>
                 <Image component="img" fluid={entry.foto.fluid} style={{height: "500px", width: "100%"}} alt="fractieFoto"></Image>

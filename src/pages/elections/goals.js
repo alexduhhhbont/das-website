@@ -11,12 +11,12 @@ export default function goals() {
 
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Vision 2022 - DAS Eindhoven</title>
+                <title>Vision of DAS - DAS Eindhoven</title>
             </Helmet>
 
             <Spacer spacing={4}/>
 
-            <SectionTitle title="Vision 2022"/>
+            <SectionTitle title="Vision of DAS"/>
 
             <Spacer spacing={2}/> 
 

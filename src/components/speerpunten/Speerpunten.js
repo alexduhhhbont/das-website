@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import icon1 from '../../images/Education-visual-150x150.jpg'
 import Typography from '@mui/material/Typography';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -22,7 +23,15 @@ export default function Speerpunten() {
                         <Grid item xs={12} md={10}>
                             <CardContent>
                                 <Typography variant="h5">{entry.standpunt.standpunt}</Typography>
-                                <Typography paragraph variant="body3">{entry.elaboration.elaboration}</Typography>
+                                <Typography paragraph variant="body3">
+                                  {entry.elaboration.elaboration}
+                                </Typography>
+                                <div className='blog_content'>
+                                  {entry.achieved === null ? (<></>) : (
+                                    documentToReactComponents(JSON.parse(entry.achieved.raw))
+                                    )
+                                  }
+                                </div>
                             </CardContent>
                         </Grid>
                     </Grid>
@@ -38,6 +47,9 @@ const getSpeerpunten = graphql`
         nodes {
           standpunt {
             standpunt
+          }
+          achieved{
+            raw
           }
           order
           elaboration {

@@ -89,11 +89,11 @@ export default function Navbar() {
                           </div>
                         ): ("")}
                         <Link className="nav-link" to="/updates">Updates</Link>
-                        <Link className="nav-link" to="/viewpoints">Viewpoints</Link>
+                        <Link className="nav-link" to="/elections/goals">Vision</Link>
                         <div className="dropdown">
                             <Link className="dropdown-button" to="#">About</Link>
                             <div className='dropdown-content blue-background'>
-                                <Link className="dropdown__nav-link" to="/party/fraction">Fraction</Link>
+                                <Link className="dropdown__nav-link" to="/party/faction">Faction</Link>
                                 <Link className="dropdown__nav-link" to="/party/board">Board</Link>
                                 <Link className="dropdown__nav-link" to="/party/associations">Associations</Link>
                             </div>
@@ -128,8 +128,8 @@ export default function Navbar() {
                                 <Spacer spacing={2}/> 
                                 <MobileLink className="nav-link" to="/">Home</MobileLink>
                                 <MobileLink className="nav-link" to="/updates">Updates</MobileLink>
+                                <MobileLink className="nav-link" to="/elections/goals">Vision</MobileLink>
                                 <MobileLink className="nav-link" to="/publications">Publications</MobileLink>
-                                <MobileLink className="nav-link" to="/gemeenteraadsverkiezingen">Municipal Elections</MobileLink>
                                 <MobileLink className="nav-link" to="/contact">Contact</MobileLink>
                                 <MobileLink className="nav-link" to="/housing">Housing</MobileLink>
                                 <MobileLink className="nav-link" to="/student-teams">Student teams</MobileLink>
@@ -142,7 +142,7 @@ export default function Navbar() {
                                   </>
                                 ) : (<></>)}
                                 <MenuGroup>Party</MenuGroup>
-                                <MobileLink className="nav-link" to="/party/fraction">Fraction</MobileLink>
+                                <MobileLink className="nav-link" to="/party/faction">Faction</MobileLink>
                                 <MobileLink className="nav-link" to="/party/board">Board</MobileLink>
                                 <MobileLink className="nav-link" to="/party/associations">Associations</MobileLink>                            
                             </ListItemContainerMobile>

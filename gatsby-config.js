@@ -1,3 +1,8 @@
+// Add the environment variables from the corresponding .env.*.private file to process.env
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.daseindhoven.nl',
@@ -7,13 +12,7 @@ module.exports = {
     }
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-contentful',
-      options: {
-        accessToken: 'TMEMBwXfCJByaZsQruHGxdDFQA42hlwEiYFasHIeZsA',
-        spaceId: 'pz1dz75yzlrc',
-      },
-    },
+    require("./config/contentful"),
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-styled-components',
