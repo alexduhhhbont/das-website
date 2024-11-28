@@ -23,9 +23,6 @@ export default function Speerpunten() {
                         <Grid item xs={12} md={10}>
                             <CardContent>
                                 <Typography variant="h5">{entry.standpunt.standpunt}</Typography>
-                                <Typography paragraph variant="body3">
-                                  {entry.elaboration.elaboration}
-                                </Typography>
                                 <div className='blog_content'>
                                   {entry.achieved === null ? (<></>) : (
                                     documentToReactComponents(JSON.parse(entry.achieved.raw))
@@ -52,9 +49,6 @@ const getSpeerpunten = graphql`
             raw
           }
           order
-          elaboration {
-            elaboration
-          }
           icon {
             fluid(maxWidth: 150, maxHeight: 150, quality: 100) {
               ...GatsbyContentfulFluid_withWebp_noBase64
