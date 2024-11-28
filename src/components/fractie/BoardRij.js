@@ -18,7 +18,7 @@ export default function BoardRij() {
               <Grid item xs={12} md={3}>
                   <Card>
                       <Box padding={4}>
-                  <Typography variant="h5">Wob Knaap</Typography>
+                  <Typography variant="h5">Deen Slenter</Typography>
                   <Typography>Chair</Typography>
                     </Box>
                   </Card>
@@ -26,7 +26,7 @@ export default function BoardRij() {
                 <Grid item xs={12} md={3}>
                   <Card>
                       <Box padding={4}>
-                  <Typography variant="h5">Ivo Braam</Typography>
+                  <Typography variant="h5">Iwan Bloksma</Typography>
                   <Typography>Secretary</Typography>
                     </Box>
                   </Card>
@@ -34,7 +34,7 @@ export default function BoardRij() {
                 <Grid item xs={12} md={3}>
                   <Card>
                       <Box padding={4}>
-                  <Typography variant="h5">Harmen Korvemaker</Typography>
+                  <Typography variant="h5">Sam Bronckers</Typography>
                   <Typography>Treasurer</Typography>
                     </Box>
                   </Card>

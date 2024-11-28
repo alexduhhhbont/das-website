@@ -99,7 +99,7 @@ export default function Navbar() {
                             </div>
                         </div>
                         <Link className="nav-link" to="/publications">Publications</Link>
-                        <Link className="nav-link" to="https://intranet.tue.nl/en/university/right-of-say/university-council/">University Council</Link>
+                        <Link className="nav-link" to="https://tuenl.sharepoint.com/sites/intranet-co-determination/SitePages/university-council.aspx">University Council</Link>
                     </div>
                     </Hidden>
 

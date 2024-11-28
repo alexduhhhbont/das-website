@@ -60,8 +60,8 @@ const HomePage = ({data}) => {
           <>
           <BGImageSlant elections backgroundImage={heroImage.file.url}></BGImageSlant>
           <div className="electionsIntroHeroText">
-            <h1>{'Elections ' + currentYear}</h1>
-            <h3>5th and 6th of December</h3>
+            <h1>{'Elections ' + (currentYear + 1)}</h1>
+            <h3>2nd, 3th and 4th of December</h3>
             <p>DAS focuses on the ambitious students that want to develop themselves 
               alongside their studies.</p>
             <Button size="large" href="/vote" variant="contained">Vote!</Button>
