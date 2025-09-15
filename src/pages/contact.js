@@ -31,8 +31,7 @@ export default function Contact() {
             <Spacer spacing={2}/>
             <Stack spacing={2} style={{textAlign: "center"}}>
                 <Link underline="none" href="mailto:DAS@tue.nl" style={{color: "black"}}> style={{fontWeight: "600"}} DAS@tue.nl</Link> 
-                {/* <Link underline="none" href="mailto:board@daseindhoven.nl" style={{color: "black"}}><span style={{fontWeight: "600"}}>Board: </span> board@daseindhoven.nl</Link> */}
-            </Stack>
+                  </Stack>
             <Spacer spacing={4}/> 
 
             <SectionTitle title="Phone"/>
