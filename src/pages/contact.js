@@ -29,9 +29,9 @@ export default function Contact() {
 
             <SectionTitle title="Email"/>
             <Spacer spacing={2}/>
-            <Stack spacing={2} style={{textAlign: "center"}}>
-                <Link underline="none" href="mailto:DAS@tue.nl" style={{color: "black"}}> style={{fontWeight: "600"}} DAS@tue.nl</Link> 
-                  </Stack>
+                <Stack spacing={2} style={{textAlign: "center"}}>
+                    <Link underline="none" href="mailto:DAS@tue.nl" style={{color: "black"}}> style={{fontWeight: "600"}} DAS@tue.nl</Link> 
+                </Stack>
             <Spacer spacing={4}/> 
 
             <SectionTitle title="Phone"/>
